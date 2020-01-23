@@ -1,5 +1,7 @@
-Welcome to the DirectoryLister wiki!
+Welcome to the Directory Lister wiki!
 
-1. Installation
-2. Configuration
-3. Troubleshooting
+# Pages
+
+  * [Installation](https://github.com/DirectoryLister/DirectoryLister/wiki/Installation)
+  * [Configuration](https://github.com/DirectoryLister/DirectoryLister/wiki/Configuration)
+  * [Troubleshooting](https://github.com/DirectoryLister/DirectoryLister/wiki/Troubleshooting)
