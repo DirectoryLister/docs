@@ -12,4 +12,4 @@ Installation of Directory Lister is simple.
 
 ---
 
-Next: Configuration
+Next: [Configuration](https://github.com/DirectoryLister/DirectoryLister/wiki/Configuration)
