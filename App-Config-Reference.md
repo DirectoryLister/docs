@@ -64,7 +64,7 @@ The anonymous function receives two `\SplFileInfo` objects as arguments and expe
 
 <dl>
     <dt><strong>Possible values</strong></dt>
-    <dd><code>An array of path strings</code></dd>
+    <dd>An array of path strings</dd>
 </dl>
 
 <dl>
