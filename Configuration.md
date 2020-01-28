@@ -23,10 +23,10 @@ Your default `.env` file should look something like this:
 
     MAX_HASH_SIZE=1000000000
 
-See the [.env Config Reference]() for more information about individual options.
+See the [.env Config Reference](https://github.com/DirectoryLister/DirectoryLister/wiki/.env-Config-Reference) for more information about individual options.
 
 # Application Config
 
 More control can be achieved via the app config files located in `app/config`. Here you have full control over each option and can even write full PHP code if desired.
 
-More info coming soon...
+See the [App Config Reference](https://github.com/DirectoryLister/DirectoryLister/wiki/App-Config-Reference) for more information about individual application configuration options.
