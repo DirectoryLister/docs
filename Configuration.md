@@ -23,9 +23,7 @@ Your default `.env` file should look something like this:
 
     MAX_HASH_SIZE=1000000000
 
-### `.env` Options
-
-Coming soon...
+See the [.env Config Reference]() for more information about individual options.
 
 # Application Config
 
