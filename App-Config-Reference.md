@@ -167,7 +167,6 @@ The anonymous function receives two `\SplFileInfo` objects as arguments and expe
     <dd><code>MAX_HASH_SIZE</code></dd>
 </dl>
 
-
 # `icons.php`
 
 Here is were file types are mapped to their respective icons. The mapping is a PHP array where the array key is the file extension (without a preceding dot) and the array value is the desired [Font Awesome](https://fontawesome.com/icons) class names.
@@ -208,6 +207,11 @@ return [
     <dd><code>false</code></dd>
 </dl>
 
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>DARK_MODE</code></dd>
+</dl>
+
 ---
 
 ### `date_format`
@@ -224,6 +228,11 @@ return [
     <dd><code>Y-m-d H:i:s</code></dd>
 </dl>
 
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>DATE_FORMAT</code></dd>
+</dl>
+
 ---
 
 ### `cache`
@@ -232,10 +241,15 @@ return [
 
 <dl>
     <dt><strong>Possible values</strong></dt>
-    <dd>A directory path as a string or `false` to disable the view cache entirely</dd>
+    <dd>A directory path as a string or <code>false</code> to disable the view cache entirely</dd>
 </dl>
 
 <dl>
     <dt><strong>Default value</strong></dt>
     <dd><code>app/cache/views</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>VIEW_CACHE</code></dd>
 </dl>
