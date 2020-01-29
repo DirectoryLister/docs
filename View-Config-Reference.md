@@ -21,6 +21,27 @@ The view config is located at `app/config/view.php` and controls view-related se
 
 ---
 
+### `google_analytics_id`
+
+> Your Google analytics tracking ID.
+
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>A string in the format of <code>UA-123456789-0</code> or <code>false</code> to disable</dd>
+</dl>
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>false</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>GOOGLE_ANALYTICS_ID</code></dd>
+</dl>
+
+---
+
 ### `date_format`
 
 > The format used for rendering dates in the application views.
