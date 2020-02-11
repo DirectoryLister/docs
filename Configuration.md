@@ -27,7 +27,7 @@ Your default `.env` file should look something like this:
 
 # Application Config
 
-More control can be achieved via the application config files located in `app/config`. Here you have full control over each option and can even write full PHP code if desired. The application configs and are broken up into separate files based on their use. Reference the individual config documentation for more information about individual application configuration options.
+More control can be achieved via the application config files located in `app/config`. Here you have full control over each option and can even write full PHP code if desired. The application configs are broken up into separate files based on their use. Reference the individual config documentation for more information about individual application configuration options.
 
 ---
 
