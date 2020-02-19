@@ -14,6 +14,8 @@ Your default `.env` file should look something like this:
 
     DISPLAY_READMES=true
 
+    ZIP_DOWNLOADS=true
+
     GOOGLE_ANALYTICS_ID=false
 
     SORT_ORDER=type
