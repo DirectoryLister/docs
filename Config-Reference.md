@@ -1,5 +1,49 @@
 The app config is located at `app/config/app.php`. These options control core application functionality.
 
+---
+
+### `dark_mode`
+
+> Enable dark mode.
+
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd><code>true</code> or <code>false</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>false</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>DARK_MODE</code></dd>
+</dl>
+
+---
+
+### `date_format`
+
+> The format used for rendering dates in the application views.
+
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>See the <a href="https://www.php.net/manual/en/function.date.php#refsect1-function.date-parameters">PHP <code>date</code> format documentation</a> for possible values.</dd>
+</dl>
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>Y-m-d H:i:s</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>DATE_FORMAT</code></dd>
+</dl>
+
+---
+
 ### `display_readmes`
 
 > Parse and render README files on the page.
@@ -17,6 +61,27 @@ The app config is located at `app/config/app.php`. These options control core ap
 <dl>
     <dt><strong>Environment Variable</strong></dt>
     <dd><code>DISPLAY_READMES</code></dd>
+</dl>
+
+---
+
+### `google_analytics_id`
+
+> Your Google analytics tracking ID.
+
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>A string in the format of <code>UA-123456789-0</code> or <code>false</code> to disable</dd>
+</dl>
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>false</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>GOOGLE_ANALYTICS_ID</code></dd>
 </dl>
 
 ---
@@ -186,9 +251,9 @@ The anonymous function receives two `\SplFileInfo` objects as arguments and expe
 
 ---
 
-### `dark_mode`
+### `zip_downloads`
 
-> Enable dark mode.
+> Enable downloading of directories as a zip archive.
 
 <dl>
     <dt><strong>Possible values</strong></dt>
