@@ -1,12 +1,13 @@
-Installation of Directory Lister is simple.
+Installation of Directory Lister is fast and requires no configuraton.
 
 ###  Requirements
 
-* Directory Lister requires [PHP](https://www.php.net/) 7.2+
+  - Directory Lister requires [PHP](https://www.php.net/) 7.2+
+    - The [PHP Zip extension](https://www.php.net/manual/en/book.zip.php) is required for zip downloads
 
 ### Installation
 
-1. [Download the latest version of Directory Lister](https://github.com/DirectoryLister/DirectoryLister/releases)
+1. [Download Directory Lister](https://www.directorylister.com)
 2. Extract the zip/tar archive
 3. Copy extracted files/folders to your web server
 
