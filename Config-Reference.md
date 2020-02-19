@@ -1,6 +1,3 @@
-App config
-----------
-
 The app config is located at `app/config/app.php`. These options control core application functionality.
 
 ### `display_readmes`
@@ -168,12 +165,7 @@ The anonymous function receives two `\SplFileInfo` objects as arguments and expe
 
 ---
 
-View Config
------------
-
-The view config is located at `app/config/view.php` and controls view-related settings.
-
-### `cache`
+### `view_cache`
 
 > Path to the view cache directory. Set to 'false' to disable view caching entirely.
 
@@ -205,78 +197,10 @@ The view config is located at `app/config/view.php` and controls view-related se
 
 <dl>
     <dt><strong>Default value</strong></dt>
-    <dd><code>false</code></dd>
+    <dd><code>true</code></dd>
 </dl>
 
 <dl>
     <dt><strong>Environment Variable</strong></dt>
-    <dd><code>DARK_MODE</code></dd>
+    <dd><code>ZIP_DOWNLOADS</code></dd>
 </dl>
-
----
-
-### `date_format`
-
-> The format used for rendering dates in the application views.
-
-<dl>
-    <dt><strong>Possible values</strong></dt>
-    <dd>See the <a href="https://www.php.net/manual/en/function.date.php#refsect1-function.date-parameters">PHP <code>date</code> format documentation</a> for possible values.</dd>
-</dl>
-
-<dl>
-    <dt><strong>Default value</strong></dt>
-    <dd><code>Y-m-d H:i:s</code></dd>
-</dl>
-
-<dl>
-    <dt><strong>Environment Variable</strong></dt>
-    <dd><code>DATE_FORMAT</code></dd>
-</dl>
-
----
-
-### `google_analytics_id`
-
-> Your Google analytics tracking ID.
-
-<dl>
-    <dt><strong>Possible values</strong></dt>
-    <dd>A string in the format of <code>UA-123456789-0</code> or <code>false</code> to disable</dd>
-</dl>
-
-<dl>
-    <dt><strong>Default value</strong></dt>
-    <dd><code>false</code></dd>
-</dl>
-
-<dl>
-    <dt><strong>Environment Variable</strong></dt>
-    <dd><code>GOOGLE_ANALYTICS_ID</code></dd>
-</dl>
-
----
-Icon Config
------------
-
-The icon config is located at `app/config/icon.php`. Here is were file types are mapped to their respective icons. The mapping is a PHP array where the array key is the file extension (without a preceding dot) and the array value is the desired [Font Awesome](https://fontawesome.com/icons) class names.
-
-Example:
-
-```php
-return [
-    // Images
-    'jpg' => 'fas fa-image',
-    'png' => 'fas fa-image',
-
-    // Data
-    'json' => 'fas fa-file-alt',
-    'yaml' => 'fas fa-file-alt',
-
-    // Code
-    'css' => 'fab fab fa-css3',
-    'html' => 'fab fa-html5',
-    'php' => 'fab fa-php',
-
-    // etc...
-```
