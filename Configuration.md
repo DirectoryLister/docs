@@ -38,4 +38,6 @@ See the [Config Reference](https://github.com/DirectoryLister/DirectoryLister/wi
 Icon Configuration
 ==================
 
-You can control your application icon mapping through the icon config file. Reference the [Icon Configuration](https://github.com/DirectoryLister/DirectoryLister/wiki/Icon-Configuration) for more information on configuring icons.
+You can control your application icon mapping through the icon config file.
+
+Reference the [Icon Configuration](https://github.com/DirectoryLister/DirectoryLister/wiki/Icon-Configuration) for more information on configuring icons.
