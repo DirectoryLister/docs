@@ -17,4 +17,4 @@ PHP Fatal error:  Uncaught RuntimeException: SplFileInfo::isFile(): open_basedir
 
 #### Explanation
 
-Directory Lister has security restrictions in place to to mitigate [directory traversal attacks](https://owasp.org/www-community/attacks/Path_Traversal). Specifically, the [`open_basedir`](https://www.php.net/manual/en/ini.core.php#ini.open-basedir) directive is set to the application root directory. Thus, any attempt to access files outside of the application rood will be denied and cause an error similar to the one above. This applies to symbolic links pointing to files outside of the application root as well.
+Directory Lister has security restrictions in place to to mitigate [directory traversal attacks](https://owasp.org/www-community/attacks/Path_Traversal). Specifically, the [`open_basedir`](https://www.php.net/manual/en/ini.core.php#ini.open-basedir) directive is set to the application root directory. Thus, any attempt to access files outside of the application root will be denied and cause an error similar to the one above. This applies to symbolic links pointing to files outside of the application root as well.
