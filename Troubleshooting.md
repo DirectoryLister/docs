@@ -21,14 +21,14 @@ Directory Lister has security restrictions in place to to mitigate [directory tr
 
 ---
 
-### `undefined function mime_content_type()`
+### `Class 'DOMDocument' not found`
 
 #### Symptoms
 
 You may see an error like the following:
 
 ```
-Fatal error: Uncaught Error: Call to undefined function App\Handlers\mime_content_type()
+Fatal error: Uncaught Error: Class 'DOMDocument' not found
 ```
 
 This error occurs when you're server is missing the PHP [DOM extension](https://www.php.net/en/dom). This extension is required for rendering README files on the page. You will need to install that extension.
