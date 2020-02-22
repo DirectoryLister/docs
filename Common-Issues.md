@@ -39,3 +39,28 @@ This error occurs when you're server is missing the PHP [DOM extension](https://
     sudo yum install php-xml
 
 Alternatively you can disable READMEs by setting [`DISPLAY_READMES`](https://github.com/DirectoryLister/DirectoryLister/wiki/Config-Reference#display_readmes) to `false` in your `.env` file.
+
+---
+
+### `Call to undefined function mime_content_type()`
+
+#### Symptoms
+
+You may see an error like the following:
+
+```
+Fatal error: Uncaught Error: Call to undefined function mime_content_type()
+```
+
+This error occurs when you're server is missing the PHP [fileinfo](https://www.php.net/manual/en/book.fileinfo.php). This extension is required for rendering README files on the page. You will need to install that extension.
+
+##### Ubuntu / Debian
+
+    sudo apt install php-mime-type
+
+##### Fedora / Redhat
+
+    ???
+
+Alternatively you can disable READMEs by setting [`DISPLAY_READMES`](https://github.com/DirectoryLister/DirectoryLister/wiki/Config-Reference#display_readmes) to `false` in your `.env` file.
+
