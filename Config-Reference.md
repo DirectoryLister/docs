@@ -44,6 +44,32 @@ The app config is located at `app/config/app.php`. These options control core ap
 
 ---
 
+### `debug`
+
+> Enable application debugging and display error messages.
+
+#### !!! WARNING !!!
+
+It is recommended that debug remains OFF unless troubleshooting an issue.
+Leaving this enabled WILL cause leakage of sensitive server information.
+
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd><code>true</code> or <code>false</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>false</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>DEBUG</code></dd>
+</dl>
+
+---
+
 ### `display_readmes`
 
 > Parse and render README files on the page.
