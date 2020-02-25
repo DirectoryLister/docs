@@ -187,7 +187,9 @@ Leaving this enabled WILL cause leakage of sensitive server information.
 
 <dl>
     <dt><strong>Possible values</strong></dt>
-    <dd>See the <code>app/translations</code> folder for available translations.</dd>
+    <dd>See the <a href="https://github.com/DirectoryLister/DirectoryLister/tree/master/app/translations">
+        <code>app/translations</code>
+    </a> folder for available translations.</dd>
 </dl>
 
 <dl>
