@@ -65,7 +65,7 @@ Leaving this enabled WILL cause leakage of sensitive server information.
 
 <dl>
     <dt><strong>Environment Variable</strong></dt>
-    <dd><code>DEBUG</code></dd>
+    <dd><code>APP_DEBUG</code></dd>
 </dl>
 
 ---
