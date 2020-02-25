@@ -181,6 +181,27 @@ Leaving this enabled WILL cause leakage of sensitive server information.
 
 ---
 
+### `language`
+
+> The application interface language.
+
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>See the <code>app/translations</code> folder for available translations.</dd>
+</dl>
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>en</code> (English)</dd>
+</dl>
+
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>APP_LANGUAGE</code></dd>
+</dl>
+
+---
+
 ### `max_hash_size`
 
 > The maximum file size (in bytes) that can be hashed. This helps to prevent timeouts for excessively large files.
