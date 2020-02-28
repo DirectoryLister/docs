@@ -1,4 +1,4 @@
-#### Pages
+**Pages**
 
   - [Installation](https://github.com/DirectoryLister/DirectoryLister/wiki/Installation)
   - [Configuration](https://github.com/DirectoryLister/DirectoryLister/wiki/Configuration)
