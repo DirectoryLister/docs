@@ -29,15 +29,6 @@ Features
   - **Zip downloads** for fetching an entire directory of files in a single action.
   - **Multi-lingual support** brings Directory Lister to the language of your choice.
 
-Getting Started
----------------
-
-  - [Installation](https://github.com/DirectoryLister/DirectoryLister/wiki/Installation)
-  - [Configuration](https://github.com/DirectoryLister/DirectoryLister/wiki/Configuration)
-    - [Config Reference](https://github.com/DirectoryLister/DirectoryLister/wiki/Config-Reference)
-  - [Troubleshooting](https://github.com/DirectoryLister/DirectoryLister/wiki/Troubleshooting)
-    - [Common Issues](https://github.com/DirectoryLister/DirectoryLister/wiki/Common-Issues)
-
 Changelog
 ---------
 
