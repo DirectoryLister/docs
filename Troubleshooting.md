@@ -1,4 +1,4 @@
-Troubleshooting steps:
+### Troubleshooting steps
 
   1. Ensure you have met the minimum [requirements](https://github.com/DirectoryLister/DirectoryLister/wiki/Installation#requirements) for running Directory Lister
 
