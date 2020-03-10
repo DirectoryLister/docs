@@ -181,6 +181,31 @@ Leaving this enabled WILL cause leakage of sensitive server information.
 
 ---
 
+### `http_expires`
+
+> HTTP expires values.
+> An array of mimetypes mapped to their cache duration values.
+
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>
+        An array of <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">mime types</a>
+        mapped to their cache duration as a <a href="https://www.php.net/manual/en/datetime.formats.relative.php">relative datetime string</a>.
+    </dd>
+</dl>
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd>
+<pre style="white-space: pre;"><code>[
+    'application/zip' => '+1 hour',
+    'text/json' => '+1 hour',
+]</code></pre>
+    </dd>
+</dl>
+
+---
+
 ### `language`
 
 > The application interface language.
