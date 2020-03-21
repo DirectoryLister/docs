@@ -1,4 +1,4 @@
-Installation of Directory Lister is fast and requires no configuraton.
+Installation of Directory Lister is fast and requires no configuration.
 
 ###  Requirements
 
