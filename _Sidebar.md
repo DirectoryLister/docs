@@ -11,6 +11,4 @@
 
   - [Common Issues](https://github.com/DirectoryLister/DirectoryLister/wiki/Common-Issues)
 
----
-
 [Development](https://github.com/DirectoryLister/DirectoryLister/wiki/Development)
