@@ -64,7 +64,7 @@ or see the changes before applying
 
 ### Unit/Feature Tests
 
-    app/vendor/phpunit
+    app/vendor/bin/phpunit
 
 ### Code Coverage
 
