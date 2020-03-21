@@ -50,11 +50,11 @@ Code Analysis and Testing
 
 ### Coding Standards
 
-Applies coding standards to all application and tests files.
+Apply coding standards to all application and tests files
 
     app/vendor/bin/php-cs-fixer fix
 
-See the changes before applying.
+or see the changes before applying
 
     app/vendor/bin/php-cs-fixer fix --diff --dry-run
 
