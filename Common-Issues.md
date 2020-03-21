@@ -52,7 +52,7 @@ You may see an error like the following:
 Fatal error: Uncaught Error: Call to undefined function mime_content_type()
 ```
 
-This error occurs when you're server is missing the PHP [fileinfo](https://www.php.net/manual/en/book.fileinfo.php). This extension is required for rendering README files on the page. You will need to install that extension.
+This error occurs when you're server is missing the PHP [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) extension. This extension is required for rendering README files on the page. You will need to install that extension.
 
 ##### Ubuntu / Debian
 
