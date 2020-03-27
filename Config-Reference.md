@@ -294,12 +294,14 @@ Leaving this enabled WILL cause leakage of sensitive server information.
 
 #### Anonymous Function Example
 
-The anonymous function receives two `\SplFileInfo` objects as arguments and expects an integer to be returned.
+When using an anonymous function it must be wrapped in a `\DI\value()` function. The anonymous function receives two `\SplFileInfo` objects as arguments and expects an integer to be returned.
 
 ```php
-'sort_order' => function (SplFileInfo $file1, SplFileInfo $file2) {
-    return strcmp($file1->getRealPath(), $file2->getRealPath());
-});
+'sort_order' => \DI\value(
+    function (SplFileInfo $file1, SplFileInfo $file2) {
+        return strcmp($file1->getRealPath(), $file2->getRealPath());
+    })
+);
 ```
 
 ---
