@@ -2,6 +2,8 @@
 
 [Installation](https://github.com/DirectoryLister/DirectoryLister/wiki/Installation)
 
+  - [Upgrade Guide](https://github.com/DirectoryLister/DirectoryLister/wiki/Upgrade-Guide)
+
 [Configuration](https://github.com/DirectoryLister/DirectoryLister/wiki/Configuration)
 
   - [Config Reference](https://github.com/DirectoryLister/DirectoryLister/wiki/Config-Reference)

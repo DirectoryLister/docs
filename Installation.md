@@ -1,5 +1,7 @@
 Installation of Directory Lister is fast and requires no configuration.
 
+> ℹ️ If you're upgrading from Directory Lister 2.X see the [Upgrade Guide](https://github.com/DirectoryLister/DirectoryLister/wiki/Upgrade-Guide) for upgrade instructions.
+
 ###  Requirements
 
   - Directory Lister requires [PHP](https://www.php.net/) 7.2+
