@@ -10,10 +10,11 @@ Simple configuration changes are possible via a custom `.env` file. This file de
 
 Your default `.env` file should look something like this:
 
+    APP_DEBUG=false
+    APP_LANGUAGE=en
+
     DARK_MODE=false
-
     DISPLAY_READMES=true
-
     ZIP_DOWNLOADS=true
 
     GOOGLE_ANALYTICS_ID=false
