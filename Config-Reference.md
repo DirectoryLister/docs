@@ -112,9 +112,27 @@ Leaving this enabled WILL cause leakage of sensitive server information.
 
 ---
 
+### `hidden_files_list`
+
+> File used by `hidden_files` to define the list of hidden files.
+
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>A path string to a file</dd>
+</dl>
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>{base_path}/.hidden</code></dd>
+</dl>
+
+---
+
 ### `hidden_files`
 
-> Array of files that will be hidden from the listing. Supports glob patterns.
+> Array of files that will be hidden from the listing. Supports glob patterns (e.g. `*.txt`, `schema.{ya?ml}`, etc.).
+>
+> By defualt this will look for a `.hidden` file in the app root directory. If found, each line of this file will be used as an ignore pattern.
 
 <dl>
     <dt><strong>Possible values</strong></dt>
@@ -123,7 +141,7 @@ Leaving this enabled WILL cause leakage of sensitive server information.
 
 <dl>
     <dt><strong>Default value</strong></dt>
-    <dd><code>[]</code> (empty array)</dd>
+    <dd>Array loaded from <code>.hidden</code> file if present, otherwise an empty array (<code>[]</code>)</dd>
 </dl>
 
 #### Example
