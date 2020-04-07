@@ -123,7 +123,12 @@ Leaving this enabled WILL cause leakage of sensitive server information.
 
 <dl>
     <dt><strong>Default value</strong></dt>
-    <dd><code>{base_path}/.hidden</code></dd>
+    <dd><code>.hidden</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>HIDDEN_FILES_LIST</code></dd>
 </dl>
 
 ---
