@@ -343,6 +343,27 @@ When using an anonymous function it must be wrapped in a `\DI\value()` function.
 
 ---
 
+### `timezone`
+
+> Timezone used for date formatting.
+
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>For a list of supported timezones see: <a href="https://www.php.net/manual/en/timezones.php">https://www.php.net/manual/en/timezones.php</a>.</dd>
+</dl>
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd>The server's timezone</dd>
+</dl>
+
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>TIMEZONE</code></dd>
+</dl>
+
+---
+
 ### `view_cache`
 
 > Path to the view cache directory. Set to 'false' to disable view caching entirely.
