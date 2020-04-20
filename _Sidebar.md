@@ -8,6 +8,7 @@
 
   - [Config Reference](https://github.com/DirectoryLister/DirectoryLister/wiki/Config-Reference)
   - [Icon Configuration](https://github.com/DirectoryLister/DirectoryLister/wiki/Icon-Configuration)
+  - [Hiding Files](https://github.com/DirectoryLister/DirectoryLister/wiki/Hiding-Files)
 
 [Troubleshooting](https://github.com/DirectoryLister/DirectoryLister/wiki/Troubleshooting)
 
