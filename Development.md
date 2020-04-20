@@ -6,11 +6,11 @@ Setting up a Local Development Environment
 
 ### Requirements
 
-  * [PHP](https://php.net) >= 7.3
-    * [Composer](https://getcomposer.org)
-  * [NPM](https://www.npmjs.com)
-  * [Docker](https://www.docker.com)
-    * [Docker Compose](https://docs.docker.com/compose/)
+  - [PHP](https://php.net) >= 7.3
+    - [Composer](https://getcomposer.org)
+  - [NPM](https://www.npmjs.com)
+  - [Docker](https://www.docker.com)
+    - [Docker Compose](https://docs.docker.com/compose/)
 
 ### Instructions
 
