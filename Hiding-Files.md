@@ -39,13 +39,18 @@ Examples
 </dl>
 
 <dl>
-    <dt><code>foo/bar/*.txt</code></dt>
-    <dd>Matches all <code>.txt</code> files or folders in the <code>foo/bar</code> folder</dd>
+    <dt><code>**/*.txt</code></dt>
+    <dd>Matches any file or folder ending with <code>.txt</code> one or more folders deep (e.g. <code>foo/bar.txt</code> or <code>foo/bar/baz.txt</code>)</dd>
 </dl>
 
 <dl>
-    <dt><code>**/*.txt</code></dt>
-    <dd>Matches any file or folder ending with <code>.txt</code> one or more folders deep (e.g. <code>foo/bar.txt</code> or <code>foo/bar/baz.txt</code>)</dd>
+    <dt><code>**.txt</code></dt>
+    <dd>Matches any file or folder ending with <code>.txt</code> (e.g. <code>foo.txt</code>, <code>foo/bar.txt</code>, <code>foo/bar/baz.txt</code>, etc.)</dd>
+</dl>
+
+<dl>
+    <dt><code>foo/bar/*.txt</code></dt>
+    <dd>Matches all <code>.txt</code> files or folders in the <code>foo/bar</code> folder</dd>
 </dl>
 
 <dl>
@@ -53,7 +58,3 @@ Examples
     <dd>Matches a file or folder named <code>file.yml</code> or <code>file.yaml</code> in the root folder</dd>
 </dl>
 
-<dl>
-    <dt><code>{*,**/*}.txt</code></dt>
-    <dd>Matches any file or folder ending with <code>.txt</code></dd>
-</dl>
