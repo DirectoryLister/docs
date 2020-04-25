@@ -54,6 +54,11 @@ Examples
 </dl>
 
 <dl>
+    <dt><code>foo/bar/**.txt</code></dt>
+    <dd>Matches all <code>.txt</code> files or folders in the <code>foo/bar</code> folder and subfolders</dd>
+</dl>
+
+<dl>
     <dt><code>file.{yml,yaml}</code></dt>
     <dd>Matches a file or folder named <code>file.yml</code> or <code>file.yaml</code> in the root folder</dd>
 </dl>
