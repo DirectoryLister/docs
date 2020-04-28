@@ -287,6 +287,27 @@ Leaving this enabled WILL cause leakage of sensitive server information.
 
 ---
 
+### `readmes_first`
+
+> Show READMEs before the file listing.
+
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd><code>true</code> or <code>false</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>false</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>READMES_FIRST</code></dd>
+</dl>
+
+---
+
 ### `reverse_sort`
 
 > When enabled, reverses the order of files (after sorting is applied).
