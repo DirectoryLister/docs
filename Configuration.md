@@ -15,6 +15,7 @@ Your default `.env` file should look something like this:
 
     DARK_MODE=false
     DISPLAY_READMES=true
+    READMES_FIRST=false
     ZIP_DOWNLOADS=true
 
     GOOGLE_ANALYTICS_ID=false
@@ -26,6 +27,7 @@ Your default `.env` file should look something like this:
     HIDE_VCS_FILES=true
 
     DATE_FORMAT="Y-m-d H:i:s"
+    TIMEZONE="UTC"
 
     MAX_HASH_SIZE=1000000000
 
