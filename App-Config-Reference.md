@@ -241,6 +241,38 @@ Leaving this enabled WILL cause leakage of sensitive server information.
 
 ---
 
+### `matomo_analytics_site_id`
+
+> Your Matomo analytics site ID.
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>false</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>MATOMO_ANALYTICS_SITE_ID</code></dd>
+</dl>
+
+---
+
+### `matomo_analytics_url`
+
+> Your Matomo analytics URL.
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>false</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>MATOMO_ANALYTICS_URL</code></dd>
+</dl>
+
+---
+
 ### `max_hash_size`
 
 > The maximum file size (in bytes) that can be hashed. This helps to prevent timeouts for excessively large files.

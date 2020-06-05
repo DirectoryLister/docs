@@ -20,6 +20,9 @@ Your default `.env` file should look something like this:
 
     GOOGLE_ANALYTICS_ID=false
 
+    MATOMO_ANALYTICS_URL=false
+    MATOMO_ANALYTICS_ID=false
+
     SORT_ORDER=type
     REVERSE_SORT=false
 
