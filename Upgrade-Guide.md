@@ -9,7 +9,7 @@ Upgrading Directory Lister is quick and painless whether you're upgrading an exi
 
           rm -rf app/cache/*
 
-### Upgrade from from the Directory Lister 2
+### Upgrade from the Directory Lister 2
 
 > ℹ️ Please note, Directory Lister 3 requires PHP >= 7.2
 
