@@ -135,7 +135,7 @@ Leaving this enabled WILL cause leakage of sensitive server information.
 
 ### `hidden_files`
 
-> Array of files that will be hidden from the listing. Supports glob patterns (e.g. `*.txt`, `schema.{ya?ml}`, etc.).
+> Array of files that will be hidden from the listing. Supports glob patterns (e.g. `*.txt`, `schema.{yml,yaml}`, etc.).
 >
 > By default this will look for a `.hidden` file in the app root directory. If found, each line of this file will be used as an ignore pattern.
 
