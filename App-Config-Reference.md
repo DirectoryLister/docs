@@ -204,6 +204,27 @@ Leaving this enabled WILL cause leakage of sensitive server information.
 
 ---
 
+### `home_text`
+
+> Text of the `home` link in the navigation breadcrumbs. If undefined or null will use the translated form of "home" from your selected language.
+
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>Any string</dd>
+</dl>
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>null</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>HOME_TEXT</code></dd>
+</dl>
+
+---
+
 ### `icons`
 
 > Array of icon definitions where the array key is the file extension (without a preceding dot) and the array value is the desired Font Awesome class names.
