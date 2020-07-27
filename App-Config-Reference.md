@@ -225,20 +225,6 @@ Leaving this enabled WILL cause leakage of sensitive server information.
 
 ---
 
-### `icons`
-
-> Array of icon definitions where the array key is the file extension (without a preceding dot) and the array value is the desired Font Awesome class names.
-
-ℹ️ See the [Icon Configuration](https://github.com/DirectoryLister/DirectoryLister/wiki/Icon-Configuration) page for additional information.
-
-<dl>
-    <dt><strong>Default value</strong></dt>
-    <dd>Array loaded from <code>icons.php</code> config file
-    </dd>
-</dl>
-
----
-
 ### `language`
 
 > The application interface language.

@@ -4,18 +4,18 @@ The icon config is located at `app/config/icon.php`. Here is were file types are
 
 ```php
 return [
-    // Images
-    'jpg' => 'fas fa-image',
-    'png' => 'fas fa-image',
-
-    // Data
-    'json' => 'fas fa-file-alt',
-    'yaml' => 'fas fa-file-alt',
-
-    // Code
-    'css' => 'fab fab fa-css3',
-    'html' => 'fab fa-html5',
-    'php' => 'fab fa-php',
-
-    // etc...
+    'icons' => [
+        '7z' => 'fas fa-file-archive',
+        'aac' => 'fas fa-music',
+        'accdb' => 'fas fa-database',
+        'ai' => 'fas fa-image',
+        'aif' => 'fas fa-music',
+        'apk' => 'fab fa-android',
+        'app' => 'fas fa-window',
+        'avi' => 'fas fa-video',
+        'bak' => 'fas fa-save',
+        'bat' => 'fas fa-terminal',
+        // etc...
+    ],
+];
 ```
