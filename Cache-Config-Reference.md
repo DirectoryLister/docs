@@ -46,6 +46,42 @@ The cache config is located at `app/config/cache.php`. These options control the
 
 ---
 
+### `memcached_host`
+
+> The Memcached server hostname or IP address.
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>localhost</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Environment Variables</strong></dt>
+    <dd>
+        <code>MEMCACHED_HOST</code>
+    </dd>
+</dl>
+
+---
+
+### `memcached_port`
+
+> The Memcached server port.
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>11211</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Environment Variables</strong></dt>
+    <dd>
+        <code>MEMCACHED_PORT</code>
+    </dd>
+</dl>
+
+---
+
 ### `memcached_config`
 
 > The Memcached configuration closure. This option is used when the `cache_driver` configuration option is set to `memcached`. The closure receives a Memcached object as it's only parameter. You can use this object to configure the Memcached connection. At a minimum you must connect to one or more Memcached servers via the `addServer()` or `addServers()` methods.
@@ -54,15 +90,42 @@ The cache config is located at `app/config/cache.php`. These options control the
 
 <dl>
     <dt><strong>Default value</strong></dt>
-    <dd>A pre-configured memcached instance pointing to <code>localhost:11211</code></dd>
+    <dd>Connects to a server at <code>localhost:11211</code></dd>
+</dl>
+
+---
+
+### `redis_host`
+
+> The Redis server hostname or IP address.
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>localhost</code></dd>
 </dl>
 
 <dl>
     <dt><strong>Environment Variables</strong></dt>
     <dd>
-        <code>MEMCACHED_HOST</code> (defualts to <code>localhost</code>)
-        <br>
-        <code>MEMCACHED_PORT</code> (defaults to <code>11211</code>)
+        <code>REDIS_HOST</code>
+    </dd>
+</dl>
+
+---
+
+### `redis_port`
+
+> The Redis server port.
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>6379</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Environment Variables</strong></dt>
+    <dd>
+        <code>REDIS_PORT</code>
     </dd>
 </dl>
 
@@ -76,16 +139,7 @@ The cache config is located at `app/config/cache.php`. These options control the
 
 <dl>
     <dt><strong>Default value</strong></dt>
-    <dd>A pre-configured redis instance pointing to <code>localhost:6379</code></dd>
-</dl>
-
-<dl>
-    <dt><strong>Environment Variables</strong></dt>
-    <dd>
-        <code>REDIS_HOST</code> (defualts to <code>localhost</code>)
-        <br>
-        <code>REDIS_PORT</code> (defaults to <code>6379</code>)
-    </dd>
+    <dd>Connects to a server at <code>localhost:6379</code></dd>
 </dl>
 
 ---
