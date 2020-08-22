@@ -18,6 +18,22 @@ Directory Lister has security restrictions in place to to mitigate [directory tr
 
 ---
 
+### Configuration changes don't take affect when changed
+
+#### Symptoms
+
+Configuration changes made in the `.env` file aren't reflected in your application.
+
+#### Explanation
+
+This was an issue with the v3.4.0 release. The issue was promptly resolved with the v3.4.1 bug fix, however, the bug could persist through upgrades if the application cache wasn't cleared. To resolve this issue, first ensure you're running v3.4.1 or later then clear your application cache as per the [Upgrade Guide](https://github.com/DirectoryLister/DirectoryLister/wiki/Upgrade-Guide).
+
+```
+rm -rf app/cache/*
+```
+
+---
+
 ### `Class 'DOMDocument' not found`
 
 #### Symptoms
