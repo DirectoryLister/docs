@@ -44,6 +44,8 @@ You may see an error like the following:
 Fatal error: Uncaught Error: Class 'DOMDocument' not found
 ```
 
+#### Explanation
+
 This error occurs when you're server is missing the PHP [DOM extension](https://www.php.net/en/dom). This extension is required for rendering README files on the page. You will need to install that extension.
 
 ##### Ubuntu / Debian
@@ -67,6 +69,8 @@ You may see an error like the following:
 ```
 Fatal error: Uncaught Error: Call to undefined function mime_content_type()
 ```
+
+#### Explanation
 
 This error occurs when you're server is missing the PHP [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) extension. This extension is required for rendering README files on the page. You will need to install that extension.
 
