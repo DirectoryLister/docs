@@ -26,14 +26,6 @@ Your default `.env` file should look something like this:
     SORT_ORDER=type
     REVERSE_SORT=false
 
-    HIDE_APP_FILES=true
-    HIDE_VCS_FILES=true
-
-    DATE_FORMAT="Y-m-d H:i:s"
-    TIMEZONE="UTC"
-
-    MAX_HASH_SIZE=1000000000
-
 Application Config
 ==================
 
