@@ -299,6 +299,27 @@ Leaving this enabled WILL cause leakage of sensitive server information.
 
 ---
 
+### `meta_description`
+
+> Meta tag description text.
+
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>Any string</dd>
+</dl>
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>Yet another directory listing, powered by Directory Lister.</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>META_DESCRIPTION</code></dd>
+</dl>
+
+---
+
 ### `readmes_first`
 
 > Show READMEs before the file listing.
