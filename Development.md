@@ -18,6 +18,8 @@ Setting up a Local Development Environment
 
   2. [Clone your fork to a local repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
+          git clone {{ YOUR_REPOSITORY_URL }}
+
   3. Switch to the Directory Lister directory
 
           cd /path/to/DirectoryLister
@@ -60,7 +62,7 @@ or see the changes before applying
 
 ### Static Analysis
 
-    app/vendor/bin/psalm --show-info=true
+    app/vendor/bin/psalm
 
 ### Unit/Feature Tests
 
@@ -77,13 +79,13 @@ or generate a more detailed HTML coverage report with
 Building Release Artifacts
 --------------------------
 
-Release artifacts will built in the `artifacts` directory.
+Release artifacts will build in the `artifacts` directory.
 
 ### Build All
 
     make artifacts
 
-### Build `tar.gz`
+#### Build `tar.gz`
 
     make tar
 
