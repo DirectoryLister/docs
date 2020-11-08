@@ -18,32 +18,32 @@ Setting up a Local Development Environment
 
   2. [Clone your fork to a local repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
-          git clone {{ YOUR_REPOSITORY_URL }}
+         git clone {{ YOUR_REPOSITORY_URL }}
 
   3. Switch to the Directory Lister directory
 
-          cd /path/to/DirectoryLister
+         cd /path/to/DirectoryLister
 
   4. Install and build PHP and JavaScript dependencies
 
-          composer install --no-interaction
-          npm install && npm run dev
+         composer install --no-interaction
+         npm install && npm run dev
 
   5. Create the Docker `development` network
 
-          docker network create development
+         docker network create development
 
   6. Create the Docker development proxy
 
-          docker run -d -p 80:80 --network development --restart unless-stopped --volume /var/run/docker.sock:/tmp/docker.sock:ro --name dev-proxy jwilder/nginx-proxy
+         docker run -d -p 80:80 --network development --restart unless-stopped --volume /var/run/docker.sock:/tmp/docker.sock:ro --name dev-proxy jwilder/nginx-proxy
 
   7. Add the following entry to `/etc/hosts`:
 
-          127.0.0.1  directory-lister.local
+         127.0.0.1  directory-lister.local
 
   8. Run the local Docker container
 
-          docker-compose up -d
+         docker-compose up -d
 
 You should now be able to access your local Directory Lister installation at <http://directory-lister.local>
 
