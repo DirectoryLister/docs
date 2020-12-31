@@ -362,6 +362,27 @@ Leaving this enabled WILL cause leakage of sensitive server information.
 
 ---
 
+### `site_title`
+
+> The title of your directory listing. This will be displayed in the browser tab/title bar along with the current path.
+
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>Any string</dd>
+</dl>
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>Directory Lister</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>SITE_TITLE</code></dd>
+</dl>
+
+---
+
 ### `sort_order`
 
 > Sorting order of files and folders. Can be one of several predefined values or a custom [anonymous function](https://www.php.net/manual/en/functions.anonymous.php).
