@@ -2,7 +2,7 @@ The app config is located at `app/config/app.php`. These options control core ap
 
 ---
 
-### `dark_mode`
+### `dark_mode` [ ℹ️ Removed in v3.7.0 ]
 
 > Enable dark mode.
 
