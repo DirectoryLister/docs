@@ -20,6 +20,13 @@ An ignore pattern is a path to a file or folder that may contain one or more of 
   - `[^a-c]` matches any character not in the range (i.e. not `a`, `b` or `c`)
   - `{foo,bar,baz}` matches any pattern in the set (i.e. `foo`, `bar` or `baz`)
 
+#### Assertions
+
+The following assertions can be use to assert that a path is followed by or not followed by another pattern.
+
+  - `(=foo)` matches any file name that also contains `foo`
+  - `(!foo)` matches any file name that does not also contain `foo`
+
 Examples
 --------
 
@@ -61,5 +68,10 @@ Examples
 <dl>
     <dt><code>file.{yml,yaml}</code></dt>
     <dd>Matches a file or folder named <code>file.yml</code> or <code>file.yaml</code> in the root folder</dd>
+</dl>
+
+<dl>
+    <dt><code>file.tar(!.{gz|xz}$)</code></dt>
+    <dd>Matches a file named <code>file.tar</code> or <code>file.tar.bz</code> but not <code>file.tar.gz</code> or <code>file.tar.xz</code></dd>
 </dl>
 
