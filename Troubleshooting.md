@@ -8,7 +8,7 @@
 
   4. Check the [Common Issues](https://github.com/DirectoryLister/DirectoryLister/wiki/Common-Issues) page for a list of common issues and help in solving them
 
-  5. If you continue having issues reach out on the [Spectrum Community](https://spectrum.chat/directory-lister) or our [GitHub Issue Tracker](https://github.com/DirectoryLister/DirectoryLister/issues)
+  5. If you continue having issues reach out on the [GitHub Discussions](https://github.com/DirectoryLister/DirectoryLister/discussions) board or our [GitHub Issue Tracker](https://github.com/DirectoryLister/DirectoryLister/issues)
 
 ---
 
