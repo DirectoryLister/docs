@@ -13,7 +13,6 @@ Your default `.env` file should look something like this:
     APP_DEBUG=false
     APP_LANGUAGE=en
 
-    DARK_MODE=false
     DISPLAY_READMES=true
     READMES_FIRST=false
     ZIP_DOWNLOADS=true
