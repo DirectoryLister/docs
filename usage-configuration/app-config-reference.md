@@ -1,80 +1,153 @@
-# App Config Reference
-
 The app config is located at `app/config/app.php`. These options control core application functionality.
 
-## `dark_mode` • ℹ️ Removed in v3.7.0
+---
+
+### `dark_mode` • ℹ️ Removed in v3.7.0
 
 > Enable dark mode.
 
-**Possible values**`true` or `false`
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd><code>true</code> or <code>false</code></dd>
+</dl>
 
-**Default value**`false`
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>false</code></dd>
+</dl>
 
-**Environment Variable**`DARK_MODE`
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>DARK_MODE</code></dd>
+</dl>
 
-## `date_format`
+---
+
+### `date_format`
 
 > The format used for rendering dates in the application views.
 
-**Possible values**See the [PHP `date` format documentation](https://www.php.net/manual/en/function.date.php#refsect1-function.date-parameters) for possible values.
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>See the <a href="https://www.php.net/manual/en/function.date.php#refsect1-function.date-parameters">PHP <code>date</code> format documentation</a> for possible values.</dd>
+</dl>
 
-**Default value**`Y-m-d H:i:s`
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>Y-m-d H:i:s</code></dd>
+</dl>
 
-**Environment Variable**`DATE_FORMAT`
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>DATE_FORMAT</code></dd>
+</dl>
 
-## `debug`
+---
+
+### `debug`
 
 > Enable application debugging and display error messages.
 
-### !!! WARNING !!!
+#### !!! WARNING !!!
 
-It is recommended that debug remains OFF unless troubleshooting an issue. Leaving this enabled WILL cause leakage of sensitive server information.
+It is recommended that debug remains OFF unless troubleshooting an issue.
+Leaving this enabled WILL cause leakage of sensitive server information.
 
-**Possible values**`true` or `false`
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd><code>true</code> or <code>false</code></dd>
+</dl>
 
-**Default value**`false`
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>false</code></dd>
+</dl>
 
-**Environment Variable**`APP_DEBUG`
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>APP_DEBUG</code></dd>
+</dl>
 
-## `display_readmes`
+---
+
+### `display_readmes`
 
 > Parse and render README files on the page.
 
-**Possible values**`true` or `false`
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd><code>true</code> or <code>false</code></dd>
+</dl>
 
-**Default value**`true`
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>true</code></dd>
+</dl>
 
-**Environment Variable**`DISPLAY_READMES`
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>DISPLAY_READMES</code></dd>
+</dl>
 
-## `google_analytics_id`
+---
+
+### `google_analytics_id`
 
 > Your Google analytics tracking ID.
 
-**Possible values**A string in the format of `UA-123456789-0` or `false` to disable
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>A string in the format of <code>UA-123456789-0</code> or <code>false</code> to disable</dd>
+</dl>
 
-**Default value**`false`
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>false</code></dd>
+</dl>
 
-**Environment Variable**`GOOGLE_ANALYTICS_ID`
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>GOOGLE_ANALYTICS_ID</code></dd>
+</dl>
 
-## `hidden_files_list`
+---
 
-> File containing hidden file definitions. Will be merged with definitions from the 'hidden\_files' configuration option.
+### `hidden_files_list`
 
-**Possible values**A path string to a file
+> File containing hidden file definitions. Will be merged with definitions from the 'hidden_files' configuration option.
 
-**Default value**`.hidden`
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>A path string to a file</dd>
+</dl>
 
-**Environment Variable**`HIDDEN_FILES_LIST`
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>.hidden</code></dd>
+</dl>
 
-## `hidden_files`
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>HIDDEN_FILES_LIST</code></dd>
+</dl>
 
-> Array of hidden file definitions. Will be merged with definitions in the file defined in the 'hidden\_files\_list' configuration option. Supports glob patterns \(e.g. \*.txt, file.{yml,yaml}, etc.\).
+---
 
-**Possible values**An array of path strings
+### `hidden_files`
 
-**Default value**`[]` \(An empty array\)
+> Array of hidden file definitions. Will be merged with definitions in the file defined in the 'hidden_files_list' configuration option. Supports glob patterns (e.g. *.txt, file.{yml,yaml}, etc.).
 
-### Example
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>An array of path strings</dd>
+</dl>
+
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>[]</code> (An empty array)</dd>
+</dl>
+
+#### Example
 
 ```php
 'hidden_files' => [
@@ -85,123 +158,253 @@ It is recommended that debug remains OFF unless troubleshooting an issue. Leavin
 ]
 ```
 
-## `hide_app_files`
+---
 
-> Hide application specific files/directories \(i.e. `index.php` and the `app` folder\).
+### `hide_app_files`
 
-**Possible values**`true` or `false`
+> Hide application specific files/directories (i.e. `index.php` and the `app` folder).
 
-**Default value**`true`
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd><code>true</code> or <code>false</code></dd>
+</dl>
 
-**Environment Variable**`HIDE_APP_FILES`
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>true</code></dd>
+</dl>
 
-## `hide_vcs_files`
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>HIDE_APP_FILES</code></dd>
+</dl>
 
-> Hide the files Version Control System \(i.e. Git and Mercurial\) use to store their metadata.
+---
 
-**Possible values**`true` or `false`
+### `hide_vcs_files`
 
-**Default value**`true`
+> Hide the files Version Control System (i.e. Git and Mercurial) use to store their metadata.
 
-**Environment Variable**`HIDE_VCS_FILES`
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd><code>true</code> or <code>false</code></dd>
+</dl>
 
-## `home_text`
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>true</code></dd>
+</dl>
+
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>HIDE_VCS_FILES</code></dd>
+</dl>
+
+---
+
+### `home_text`
 
 > Text of the `home` link in the navigation breadcrumbs. If undefined or null will use the translated form of "home" from your selected language.
 
-**Possible values**Any string
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>Any string</dd>
+</dl>
 
-**Default value**`null`
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>null</code></dd>
+</dl>
 
-**Environment Variable**`HOME_TEXT`
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>HOME_TEXT</code></dd>
+</dl>
 
-## `language`
+---
+
+### `language`
 
 > The application interface language.
 
-**Possible values**See the [`app/translations`](https://github.com/DirectoryLister/DirectoryLister/tree/master/app/translations) folder for available translations.
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>See the <a href="https://github.com/DirectoryLister/DirectoryLister/tree/master/app/translations">
+        <code>app/translations</code>
+    </a> folder for available translations.</dd>
+</dl>
 
-**Default value**`en` \(English\)
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>en</code> (English)</dd>
+</dl>
 
-**Environment Variable**`APP_LANGUAGE`
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>APP_LANGUAGE</code></dd>
+</dl>
 
-## `matomo_analytics_site_id`
+---
+
+### `matomo_analytics_site_id`
 
 > Your Matomo analytics site ID.
 
-**Default value**`false`
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>false</code></dd>
+</dl>
 
-**Environment Variable**`MATOMO_ANALYTICS_SITE_ID`
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>MATOMO_ANALYTICS_SITE_ID</code></dd>
+</dl>
 
-## `matomo_analytics_url`
+---
+
+### `matomo_analytics_url`
 
 > Your Matomo analytics URL.
 
-**Default value**`false`
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>false</code></dd>
+</dl>
 
-**Environment Variable**`MATOMO_ANALYTICS_URL`
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>MATOMO_ANALYTICS_URL</code></dd>
+</dl>
 
-## `max_hash_size`
+---
 
-> The maximum file size \(in bytes\) that can be hashed. This helps to prevent timeouts for excessively large files.
+### `max_hash_size`
 
-**Possible values**Any positive integer `0` - `9223372036854775807`
+> The maximum file size (in bytes) that can be hashed. This helps to prevent timeouts for excessively large files.
 
-**Default value**`1000000000` \(`1GB`\)
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>Any positive integer <code>0</code> - <code>9223372036854775807</code></dd>
+</dl>
 
-**Environment Variable**`MAX_HASH_SIZE`
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>1000000000</code> (<code>1GB</code>)</dd>
+</dl>
 
-## `meta_description`
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>MAX_HASH_SIZE</code></dd>
+</dl>
+
+---
+
+### `meta_description`
 
 > Meta tag description text.
 
-**Possible values**Any string
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>Any string</dd>
+</dl>
 
-**Default value**`Yet another directory listing, powered by Directory Lister.`
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>Yet another directory listing, powered by Directory Lister.</code></dd>
+</dl>
 
-**Environment Variable**`META_DESCRIPTION`
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>META_DESCRIPTION</code></dd>
+</dl>
 
-## `readmes_first`
+---
+
+### `readmes_first`
 
 > Show READMEs before the file listing.
 
-**Possible values**`true` or `false`
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd><code>true</code> or <code>false</code></dd>
+</dl>
 
-**Default value**`false`
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>false</code></dd>
+</dl>
 
-**Environment Variable**`READMES_FIRST`
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>READMES_FIRST</code></dd>
+</dl>
 
-## `reverse_sort`
+---
 
-> When enabled, reverses the order of files \(after sorting is applied\).
+### `reverse_sort`
 
-**Possible values**`true` or `false`
+> When enabled, reverses the order of files (after sorting is applied).
 
-**Default value**`false`
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd><code>true</code> or <code>false</code></dd>
+</dl>
 
-**Environment Variable**`REVERSE_SORT`
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>false</code></dd>
+</dl>
 
-## `site_title`
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>REVERSE_SORT</code></dd>
+</dl>
+
+---
+
+### `site_title`
 
 > The title of your directory listing. This will be displayed in the browser tab/title bar along with the current path.
 
-**Possible values**Any string
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>Any string</dd>
+</dl>
 
-**Default value**`Directory Lister`
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>Directory Lister</code></dd>
+</dl>
 
-**Environment Variable**`SITE_TITLE`
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>SITE_TITLE</code></dd>
+</dl>
 
-## `sort_order`
+---
+
+### `sort_order`
 
 > Sorting order of files and folders. Can be one of several predefined values or a custom [anonymous function](https://www.php.net/manual/en/functions.anonymous.php).
 
-**Possible values** `type`, `natural`, `name`, `accessed`, `changed`, `modified`, `<anonymous function>`
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>
+        <code>type</code>, <code>natural</code>, <code>name</code>, <code>accessed</code>, <code>changed</code>, <code>modified</code>, <code>&lt;anonymous function&gt;</code>
+    </dd>
+</dl>
 
-**Default value**`type`
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>type</code></dd>
+</dl>
 
-**Environment Variable**`SORT_ORDER`
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>SORT_ORDER</code></dd>
+</dl>
 
-### Anonymous Function Example
+#### Anonymous Function Example
 
 When using an anonymous function it must be wrapped in a `\DI\value()` function. The anonymous function receives two `\SplFileInfo` objects as arguments and expects an integer to be returned.
 
@@ -213,33 +416,65 @@ When using an anonymous function it must be wrapped in a `\DI\value()` function.
 );
 ```
 
-## `timezone`
+---
+
+### `timezone`
 
 > Timezone used for date formatting.
 
-**Possible values**For a list of supported timezones see: [https://www.php.net/manual/en/timezones.php](https://www.php.net/manual/en/timezones.php).
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>For a list of supported timezones see: <a href="https://www.php.net/manual/en/timezones.php">https://www.php.net/manual/en/timezones.php</a>.</dd>
+</dl>
 
-**Default value**The server's timezone
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd>The server's timezone</dd>
+</dl>
 
-**Environment Variable**`TIMEZONE`
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>TIMEZONE</code></dd>
+</dl>
 
-## `view_cache`
+---
+
+### `view_cache`
 
 > Path to the view cache directory. Set to 'false' to disable view caching entirely.
 
-**Possible values**A directory path as a string or `false` to disable the view cache entirely
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd>A directory path as a string or <code>false</code> to disable the view cache entirely</dd>
+</dl>
 
-**Default value**`app/cache/views`
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>app/cache/views</code></dd>
+</dl>
 
-**Environment Variable**`VIEW_CACHE`
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>VIEW_CACHE</code></dd>
+</dl>
 
-## `zip_downloads`
+---
+
+### `zip_downloads`
 
 > Enable downloading of directories as a zip archive.
 
-**Possible values**`true` or `false`
+<dl>
+    <dt><strong>Possible values</strong></dt>
+    <dd><code>true</code> or <code>false</code></dd>
+</dl>
 
-**Default value**`true`
+<dl>
+    <dt><strong>Default value</strong></dt>
+    <dd><code>true</code></dd>
+</dl>
 
-**Environment Variable**`ZIP_DOWNLOADS`
-
+<dl>
+    <dt><strong>Environment Variable</strong></dt>
+    <dd><code>ZIP_DOWNLOADS</code></dd>
+</dl>
