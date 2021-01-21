@@ -32,13 +32,11 @@ REVERSE_SORT=false
 
 More control can be achieved via the application config files located in `app/config`. Here you have full control over each option and can even write full PHP code if desired. The application configs are broken up into separate files based on their use. Reference the individual config documentation for more information about individual application configuration options.
 
-See the [App Config](https://github.com/DirectoryLister/DirectoryLister/wiki/App-Config-Reference) or the [Cache Config](https://github.com/DirectoryLister/DirectoryLister/wiki/Cache-Config-Reference) references for more information about individual options.
+See the [App Config](app-config-reference.md) or the [Cache Config](cache-config-reference.md) references for more information about individual options.
 
 ## Icon Configuration
 
 You can control your application icon mapping through the icon config file.
 
-Reference the [Icon Configuration](https://github.com/DirectoryLister/DirectoryLister/wiki/Icon-Configuration) for more information on configuring icons.
-
-Next: [Troubleshooting](https://github.com/DirectoryLister/DirectoryLister/wiki/Troubleshooting)
+Reference the [Icon Configuration](icon-configuration.md) for more information on configuring icons.
 
