@@ -2,9 +2,13 @@
 
 By default Directory Lister will look for a `.hidden` file in the app root directory \(the same place as `index.php`\). If found, each line of this file will be used as an ignore pattern. Each line should contain a single file or path pattern with no end-of-line delimiter.
 
-> ℹ️ The `.hidden` file does not exist by default and must be created to be used.
->
-> ℹ️ You can configure the `.hidden` file name via the [`hiden_file_list`](https://github.com/DirectoryLister/DirectoryLister/wiki/Config-Reference#hidden_files_list) configuration option.
+{% hint style="info" %}
+The `.hidden` file does not exist by default and must be created to be used.
+{% endhint %}
+
+{% hint style="info" %}
+You can configure the `.hidden` file name via the [`hidden_file_list`](app-config-reference.md#hidden_files_list)configuration option.
+{% endhint %}
 
 ## Ignore Patterns
 
@@ -42,7 +46,7 @@ The following assertions can be use to assert that a path is followed by or not 
 
 `foo/bar/*.txt`Matches all `.txt` files or folders in the `foo/bar` folder
 
-`foo/bar/**.txt`Matches all `.txt` files or folders in the `foo/bar` folder and subfolders
+`foo/bar/**.txt`Matches all `.txt` files or folders in the `foo/bar` folder and sub-folders
 
 `file.{yml,yaml}`Matches a file or folder named `file.yml` or `file.yaml` in the root folder
 
