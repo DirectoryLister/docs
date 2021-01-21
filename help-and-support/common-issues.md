@@ -24,7 +24,7 @@ Configuration changes made in the `.env` file aren't reflected in your applicati
 
 ### Explanation
 
-This was an issue with the v3.4.0 release. The issue was promptly resolved with the v3.4.1 bug fix, however, the bug could persist through upgrades if the application cache wasn't cleared. To resolve this issue, first ensure you're running v3.4.1 or later then clear your application cache as per the [Upgrade Guide](https://github.com/DirectoryLister/DirectoryLister/wiki/Upgrade-Guide).
+This was an issue with the v3.4.0 release. The issue was promptly resolved with the v3.4.1 bug fix, however, the bug could persist through upgrades if the application cache wasn't cleared. To resolve this issue, first ensure you're running v3.4.1 or later then clear your application cache as per the [Upgrade Guide](../getting-started/upgrade-guide.md).
 
 ```text
 rm -rf app/cache/*
@@ -56,7 +56,7 @@ sudo apt install php-dom
 sudo yum install php-xml
 ```
 
-Alternatively you can disable READMEs by setting [`DISPLAY_READMES`](https://github.com/DirectoryLister/DirectoryLister/wiki/Config-Reference#display_readmes) to `false` in your `.env` file.
+Alternatively you can disable READMEs by setting [`DISPLAY_READMES`](../usage-configuration/app-config-reference.md#display_readmes) to `false` in your `.env` file.
 
 ## `Call to undefined function mime_content_type()`
 
@@ -84,5 +84,5 @@ sudo apt install php-mime-type
 ???
 ```
 
-Alternatively you can disable READMEs by setting [`DISPLAY_READMES`](https://github.com/DirectoryLister/DirectoryLister/wiki/Config-Reference#display_readmes) to `false` in your `.env` file.
+Alternatively you can disable READMEs by setting [`DISPLAY_READMES`](../usage-configuration/app-config-reference.md#display_readmes) to `false` in your `.env` file.
 
