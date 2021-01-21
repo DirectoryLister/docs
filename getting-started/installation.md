@@ -2,7 +2,9 @@
 
 Installation of Directory Lister is fast and requires no configuration.
 
-> ℹ️ If you're upgrading from Directory Lister 2.X see the [Upgrade Guide](https://github.com/DirectoryLister/DirectoryLister/wiki/Upgrade-Guide) for upgrade instructions.
+{% hint style="info" %}
+If you're upgrading from Directory Lister 2.X see the [Upgrade Guide](upgrade-guide.md) for upgrade instructions.
+{% endhint %}
 
 ## Requirements
 
@@ -18,7 +20,7 @@ Installation of Directory Lister is fast and requires no configuration.
 
 ## Install with Composer
 
-```text
+```bash
 composer create-project phlak/directory-lister
 ```
 
