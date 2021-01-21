@@ -15,7 +15,9 @@ Upgrading Directory Lister is quick and painless whether you're upgrading an exi
 
 ## Upgrade from Directory Lister 2
 
-> ℹ️ Please note, Directory Lister 3 requires PHP &gt;= 7.2
+{% hint style="info" %}
+Please note, Directory Lister 3 requires PHP &gt;= 7.2
+{% endhint %}
 
 1. Download the latest version of Directory Lister 3 from [https://www.directorylister.com](https://www.directorylister.com)
 2. Extract the zip/tar archive
@@ -26,6 +28,4 @@ Upgrading Directory Lister is quick and painless whether you're upgrading an exi
    ```
 
 4. Copy the extracted files/folders to your existing installation location overwriting any files if prompted
-
-Next: [Configuration](https://github.com/DirectoryLister/DirectoryLister/wiki/Configuration)
 
