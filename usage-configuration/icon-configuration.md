@@ -1,6 +1,8 @@
-The icon config is located at `app/config/icon.php`. Here is were file types are mapped to their respective icons. The mapping is a PHP array where the array key is the file extension (without a preceding dot) and the array value is the desired [Font Awesome](https://fontawesome.com/icons) class names.
+# Icon Configuration
 
-#### Example
+The icon config is located at `app/config/icon.php`. Here is were file types are mapped to their respective icons. The mapping is a PHP array where the array key is the file extension \(without a preceding dot\) and the array value is the desired [Font Awesome](https://fontawesome.com/icons) class names.
+
+## Example
 
 ```php
 return [
@@ -19,3 +21,4 @@ return [
     ],
 ];
 ```
+

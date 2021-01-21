@@ -1,21 +1,26 @@
+# Table of contents
+
+* [Introduction](README.md)
+
 ## Getting Started
 
-  - [Installation](Installation.md)
-  - [Upgrade Guide](Upgrade-Guide.md)
+* [Installation](getting-started/installation.md)
+* [Upgrade Guide](getting-started/upgrade-guide.md)
 
-## Application
+## Usage & Configuration <a id="usage-configuration"></a>
 
-  - [Configuration](Configuration.md)
-  - [App Config Reference](App-Config-Reference.md)
-  - [Cache Config Reference](Cache-Config-Reference.md)
-  - [Icon Configuration](Icon-Configuration.md)
-  - [Hiding Files](Hiding-Files.md)
+* [Configuration](usage-configuration/configuration.md)
+* [App Config Reference](usage-configuration/app-config-reference.md)
+* [Cache Config Reference](usage-configuration/cache-config-reference.md)
+* [Icon Configuration](usage-configuration/icon-configuration.md)
+* [Hiding Files](usage-configuration/hiding-files.md)
 
 ## Help & Support
 
-  - [Troubleshooting](Troubleshooting.md)
-  - [Common Issues](Common-Issues.md)
+* [Troubleshooting](help-and-support/troubleshooting.md)
+* [Common Issues](help-and-support/common-issues.md)
 
 ## Miscellaneous
 
-  - [Development](Development.md)
+* [Development](miscellaneous/development.md)
+
