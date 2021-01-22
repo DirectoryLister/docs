@@ -147,140 +147,229 @@ An array of paths \(strings\)
 {% endtab %}
 {% endtabs %}
 
-```php
-'hidden_files' => [
-    'somefile.txt', // Matches 'somefile.txt' exactly
-    'README.*', // Matches files named 'README' with any file extension
-    'foo/*', // Matches all files in the 'foo' directory
-    'schema.{ya?ml}', // Matches 'schema.yml' or 'schema.yaml'
-]
-```
-
 ## `hide_app_files`
 
-> Hide application specific files/directories \(i.e. `index.php` and the `app` folder\).
+Hide application specific files/directories \(i.e. `index.php` and the `app` folder\).
 
-**Possible values**`true` or `false`
+{% tabs %}
+{% tab title="Possible Values" %}
+`true` or `false`
+{% endtab %}
 
-**Default value**`true`
+{% tab title="Default Value" %}
+`true`
+{% endtab %}
 
-**Environment Variable**`HIDE_APP_FILES`
+{% tab title="Environment Variable" %}
+`HIDE_APP_FILES`
+{% endtab %}
+{% endtabs %}
 
 ## `hide_vcs_files`
 
-> Hide the files Version Control System \(i.e. Git and Mercurial\) use to store their metadata.
+Hide the files Version Control Systems \(i.e. Git and Mercurial\) use to store their metadata.
 
-### **Possible values**
+{% tabs %}
+{% tab title="Possible Values" %}
+`true` or `false`
+{% endtab %}
 
- ****`true` or `false`
-
-### **Default value**
-
+{% tab title="Default Value" %}
 `true`
+{% endtab %}
 
-### **Environment Variable**
-
- ****`HIDE_VCS_FILES`
+{% tab title="Environment Variable" %}
+`HIDE_VCS_FILES`
+{% endtab %}
+{% endtabs %}
 
 ## `home_text`
 
-> Text of the `home` link in the navigation breadcrumbs. If undefined or null will use the translated form of "home" from your selected language.
+Text of the `home` link in the navigation breadcrumbs. If undefined or `null` will use the translated form of "home" form your selected language.
 
-**Possible values**Any string
+{% tabs %}
+{% tab title="Possible Values" %}
+Any string
+{% endtab %}
 
-**Default value**`null`
+{% tab title="Default Value" %}
+`null`
+{% endtab %}
 
-**Environment Variable**`HOME_TEXT`
+{% tab title="Environment Variable" %}
+`HOME_TEXT`
+{% endtab %}
+{% endtabs %}
 
 ## `language`
 
-> The application interface language.
+The application's interface language.
 
-**Possible values**See the [`app/translations`](https://github.com/DirectoryLister/DirectoryLister/tree/master/app/translations) folder for available translations.
+{% tabs %}
+{% tab title="Possible Values" %}
+See the [`app/translations`](https://github.com/DirectoryLister/DirectoryLister/tree/master/app/translations) folder for available translations.
+{% endtab %}
 
-**Default value**`en` \(English\)
+{% tab title="Default Value" %}
+`en` \(English\)
+{% endtab %}
 
-**Environment Variable**`APP_LANGUAGE`
+{% tab title="Environment Variable" %}
+`APP_LANGUAGE`
+{% endtab %}
+{% endtabs %}
 
 ## `matomo_analytics_site_id`
 
-> Your Matomo analytics site ID.
+Your Matomo analytics site ID.
 
-**Default value**`false`
+{% tabs %}
+{% tab title="Possible Values" %}
+A Matomo analytics site ID \(string\)
+{% endtab %}
 
-**Environment Variable**`MATOMO_ANALYTICS_SITE_ID`
+{% tab title="Default Value" %}
+`false`
+{% endtab %}
+
+{% tab title="Environment Variable" %}
+`MATOMO_ANALYTICS_SITE_ID`
+{% endtab %}
+{% endtabs %}
 
 ## `matomo_analytics_url`
 
-> Your Matomo analytics URL.
+Your Matomo analytics URL.
 
-**Default value**`false`
+{% tabs %}
+{% tab title="Possible Values" %}
+A Matomo analytics URL \(string\)
+{% endtab %}
 
-**Environment Variable**`MATOMO_ANALYTICS_URL`
+{% tab title="Default Value" %}
+`false`
+{% endtab %}
+
+{% tab title="Environment Variable" %}
+`MATOMO_ANALYTICS_URL`
+{% endtab %}
+{% endtabs %}
 
 ## `max_hash_size`
 
-> The maximum file size \(in bytes\) that can be hashed. This helps to prevent timeouts for excessively large files.
+The maximum file size \(in bytes\) that can be hashed. This helps to prevent timeouts for excessively large files.
 
-**Possible values**Any positive integer `0` - `9223372036854775807`
+{% hint style="warning" %}
+The larger a file is the longer it will take to calculate hashes for that file.
+{% endhint %}
 
-**Default value**`1000000000` \(`1GB`\)
+{% tabs %}
+{% tab title="Possible Values" %}
+Any positive integer `0` - `9223372036854775807` \([`PHP_INT_MAX`](https://www.php.net/manual/en/reserved.constants.php#constant.php-int-max)\)
+{% endtab %}
 
-**Environment Variable**`MAX_HASH_SIZE`
+{% tab title="Default Value" %}
+`1000000000` \(1 GB\)
+{% endtab %}
+
+{% tab title="Environment Variable" %}
+`MAX_HASH_SIZE`
+{% endtab %}
+{% endtabs %}
 
 ## `meta_description`
 
-> Meta tag description text.
+Meta tag description \(i.e. `<meta name="description">`\) text.
 
-**Possible values**Any string
+{% tabs %}
+{% tab title="Possible Values" %}
+Any string
+{% endtab %}
 
-**Default value**`Yet another directory listing, powered by Directory Lister.`
+{% tab title="Default Value" %}
+`Yet another directory listing, powered by Directory Lister.`
+{% endtab %}
 
-**Environment Variable**`META_DESCRIPTION`
+{% tab title="Environment Variable" %}
+`META_DESCRIPTION`
+{% endtab %}
+{% endtabs %}
 
 ## `readmes_first`
 
-> Show READMEs before the file listing.
+Show READMEs before the file listing.
 
-**Possible values**`true` or `false`
+{% tabs %}
+{% tab title="Possible Values" %}
+`true` or `false`
+{% endtab %}
 
-**Default value**`false`
+{% tab title="Default Value" %}
+`false`
+{% endtab %}
 
-**Environment Variable**`READMES_FIRST`
+{% tab title="Environment Variable" %}
+`READMES_FIRST`
+{% endtab %}
+{% endtabs %}
 
 ## `reverse_sort`
 
-> When enabled, reverses the order of files \(after sorting is applied\).
+When enabled, reverses the order of files \(after sorting is applied\).
 
-**Possible values**`true` or `false`
+{% tabs %}
+{% tab title="Possible Values" %}
+`true` or `false`
+{% endtab %}
 
-**Default value**`false`
+{% tab title="Default Value" %}
+`false`
+{% endtab %}
 
-**Environment Variable**`REVERSE_SORT`
+{% tab title="Environment Variable" %}
+`REVERSE_SORT`
+{% endtab %}
+{% endtabs %}
 
 ## `site_title`
 
-> The title of your directory listing. This will be displayed in the browser tab/title bar along with the current path.
+The title of your directory listing. This will be displayed in the browser tab/title bar along with the current path.
 
-**Possible values**Any string
+{% tabs %}
+{% tab title="Possible Values" %}
+Any string
+{% endtab %}
 
-**Default value**`Directory Lister`
+{% tab title="Default Value" %}
+`Directory Lister`
+{% endtab %}
 
-**Environment Variable**`SITE_TITLE`
+{% tab title="Environment Variable" %}
+`SITE_TITLE`
+{% endtab %}
+{% endtabs %}
 
 ## `sort_order`
 
-> Sorting order of files and folders. Can be one of several predefined values or a custom [anonymous function](https://www.php.net/manual/en/functions.anonymous.php).
+Sorting order of files and folders. Can be one of several predefined values or a custom [anonymous function](https://www.php.net/manual/en/functions.anonymous.php).
 
-**Possible values** `type`, `natural`, `name`, `accessed`, `changed`, `modified`, `<anonymous function>`
+{% tabs %}
+{% tab title="Possible Values" %}
+`type`, `natural`, `name`, `accessed`, `changed`, `modified`, `<anonymous function>`
+{% endtab %}
 
-**Default value**`type`
+{% tab title="Default Value" %}
+`type`
+{% endtab %}
 
-**Environment Variable**`SORT_ORDER`
+{% tab title="Environment Variable" %}
+`SORT_ORDER`
+{% endtab %}
 
-### Anonymous Function Example
-
+{% tab title="Anonymous Functions" %}
 When using an anonymous function it must be wrapped in a `\DI\value()` function. The anonymous function receives two `\SplFileInfo` objects as arguments and expects an integer to be returned.
+
+#### Example
 
 ```php
 'sort_order' => \DI\value(
@@ -289,34 +378,42 @@ When using an anonymous function it must be wrapped in a `\DI\value()` function.
     })
 );
 ```
+{% endtab %}
+{% endtabs %}
 
 ## `timezone`
 
-> Timezone used for date formatting.
+Timezone used for data formatting.
 
-**Possible values**For a list of supported timezones see: [https://www.php.net/manual/en/timezones.php](https://www.php.net/manual/en/timezones.php).
+{% tabs %}
+{% tab title="Possible Values" %}
+For a list of supported timezones see: [https://www.php.net/manual/en/timezones.php](https://www.php.net/manual/en/timezones.php).
+{% endtab %}
 
-**Default value**The server's timezone
+{% tab title="Default Value" %}
+The server's timezone
+{% endtab %}
 
-**Environment Variable**`TIMEZONE`
-
-## `view_cache`
-
-> Path to the view cache directory. Set to 'false' to disable view caching entirely.
-
-**Possible values**A directory path as a string or `false` to disable the view cache entirely
-
-**Default value**`app/cache/views`
-
-**Environment Variable**`VIEW_CACHE`
+{% tab title="Environment Variable" %}
+`TIMEZONE`
+{% endtab %}
+{% endtabs %}
 
 ## `zip_downloads`
 
-> Enable downloading of directories as a zip archive.
+Enable downloading of directories as a zip archive.
 
-**Possible values**`true` or `false`
+{% tabs %}
+{% tab title="Possible Values" %}
+`true` or `false`
+{% endtab %}
 
-**Default value**`true`
+{% tab title="Default Value" %}
+`true`
+{% endtab %}
 
-**Environment Variable**`ZIP_DOWNLOADS`
+{% tab title="Environment Variable" %}
+`ZIP_DOWNLOADS`
+{% endtab %}
+{% endtabs %}
 
