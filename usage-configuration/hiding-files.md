@@ -34,21 +34,21 @@ The following assertions can be use to assert that a path is followed by or not 
 
 ## Examples
 
-`foo`Matches the literal file or folder `foo` in the root folder
+**`foo`** Match the literal file or folder `foo` in the root folder
 
-`foo/bar`Matches the literal file or folder `bar` in the `foo` folder
+**`foo/bar`** Matches the literal file or folder `bar` in the `foo` folder
 
-`*.txt`Matches any file or folder ending with `.txt` in the root folder
+**`*.txt`** Matches any file or folder ending with `.txt` in the root folder
 
-`**/*.txt`Matches any file or folder ending with `.txt` one or more folders deep \(e.g. `foo/bar.txt` or `foo/bar/baz.txt`\)
+**`**/*.txt`** Matches any file or folder ending with `.txt` one or more folders deep \(e.g. `foo/bar.txt` or `foo/bar/baz.txt`\)
 
-`**.txt`Matches any file or folder ending with `.txt` \(e.g. `foo.txt`, `foo/bar.txt`, `foo/bar/baz.txt`, etc.\)
+**`**.txt`** Matches any file or folder ending with `.txt` \(e.g. `foo.txt`, `foo/bar.txt`, `foo/bar/baz.txt`, etc.\)
 
-`foo/bar/*.txt`Matches all `.txt` files or folders in the `foo/bar` folder
+**`foo/bar/*.txt`** Matches all `.txt` files or folders in the `foo/bar` folder
 
-`foo/bar/**.txt`Matches all `.txt` files or folders in the `foo/bar` folder and sub-folders
+**`foo/bar/**.txt`** Matches all `.txt` files or folders in the `foo/bar` folder and sub-folders
 
-`file.{yml,yaml}`Matches a file or folder named `file.yml` or `file.yaml` in the root folder
+**`file.{yml,yaml}`** Matches a file or folder named `file.yml` or `file.yaml` in the root folder
 
-`file.tar(!.{gz|xz}$)`Matches a file named `file.tar` or `file.tar.bz` but not `file.tar.gz` or `file.tar.xz`
+**`file.tar(!.{gz|xz}$)`** Matches a file named `file.tar` or `file.tar.bz` but not `file.tar.gz` or `file.tar.xz`
 
