@@ -56,7 +56,7 @@ sudo apt install php-dom
 sudo yum install php-xml
 ```
 
-Alternatively you can disable READMEs by setting [`DISPLAY_READMES`](../usage-configuration/app-config-reference.md#display_readmes) to `false` in your `.env` file.
+Alternatively you can disable READMEs by setting [`DISPLAY_READMES`](../configuration/app-config-reference.md#display_readmes) to `false` in your `.env` file.
 
 ## `Call to undefined function mime_content_type()`
 
@@ -84,5 +84,5 @@ sudo apt install php-mime-type
 ???
 ```
 
-Alternatively you can disable READMEs by setting [`DISPLAY_READMES`](../usage-configuration/app-config-reference.md#display_readmes) to `false` in your `.env` file.
+Alternatively you can disable READMEs by setting [`DISPLAY_READMES`](../configuration/app-config-reference.md#display_readmes) to `false` in your `.env` file.
 
