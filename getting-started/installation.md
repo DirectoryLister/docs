@@ -24,5 +24,3 @@ If you're upgrading from Directory Lister 2.X see the [Upgrade Guide](upgrade-gu
 composer create-project phlak/directory-lister
 ```
 
-Next: [Configuration](https://github.com/DirectoryLister/DirectoryLister/wiki/Configuration)
-
