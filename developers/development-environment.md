@@ -1,5 +1,7 @@
 # Development Environment
 
+
+
 {% hint style="info" %}
 These instructions are for setting up a local DEVELOPMENT environment. If you are looking for basic installation instruction see the [Installation](../getting-started/installation.md) page instead.
 {% endhint %}
