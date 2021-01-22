@@ -1,189 +1,97 @@
+# Cache Config Reference
+
 The cache config is located at `app/config/cache.php`. These options control the application cache.
 
----
-
-### `cache_driver`
+## `cache_driver`
 
 > The application cache driver. Setting this value to `array` will disable the cache across requests. Additional driver-specific options may be required.
 
-<dl>
-    <dt><strong>Possible values</strong></dt>
-    <dd>
-        <code>apcu</code>, <code>array</code>, <code>file</code>, <code>memcached</code>, <code>redis</code>, <code>php-file</code>
-    </dd>
-</dl>
+**Possible values** `apcu`, `array`, `file`, `memcached`, `redis`, `php-file`
 
-<dl>
-    <dt><strong>Default value</strong></dt>
-    <dd><code>file</code></dd>
-</dl>
+**Default value**`file`
 
-<dl>
-    <dt><strong>Environment Variable</strong></dt>
-    <dd><code>CACHE_DRIVER</code></dd>
-</dl>
+**Environment Variable**`CACHE_DRIVER`
 
----
+## `cache_lifetime`
 
-### `cache_lifetime`
+> The app cache lifetime \(in seconds\). If set to 0, cache indefinitely.
 
-> The app cache lifetime (in seconds). If set to 0, cache indefinitely.
+**Possible values**Any positive integer
 
-<dl>
-    <dt><strong>Possible values</strong></dt>
-    <dd>Any positive integer</dd>
-</dl>
+**Default value**`0` \(indefinitely\)
 
-<dl>
-    <dt><strong>Default value</strong></dt>
-    <dd><code>0</code> (indefinitely)</dd>
-</dl>
+**Environment Variable**`CACHE_LIFETIME`
 
-<dl>
-    <dt><strong>Environment Variable</strong></dt>
-    <dd><code>CACHE_LIFETIME</code></dd>
-</dl>
-
----
-
-### `memcached_host`
+## `memcached_host`
 
 > The Memcached server hostname or IP address.
 
-<dl>
-    <dt><strong>Default value</strong></dt>
-    <dd><code>localhost</code></dd>
-</dl>
+**Default value**`localhost`
 
-<dl>
-    <dt><strong>Environment Variables</strong></dt>
-    <dd>
-        <code>MEMCACHED_HOST</code>
-    </dd>
-</dl>
+**Environment Variables** `MEMCACHED_HOST`
 
----
-
-### `memcached_port`
+## `memcached_port`
 
 > The Memcached server port.
 
-<dl>
-    <dt><strong>Default value</strong></dt>
-    <dd><code>11211</code></dd>
-</dl>
+**Default value**`11211`
 
-<dl>
-    <dt><strong>Environment Variables</strong></dt>
-    <dd>
-        <code>MEMCACHED_PORT</code>
-    </dd>
-</dl>
+**Environment Variables** `MEMCACHED_PORT`
 
----
-
-### `memcached_config`
+## `memcached_config`
 
 > The Memcached configuration closure. This option is used when the `cache_driver` configuration option is set to `memcached`. The closure receives a Memcached object as it's only parameter. You can use this object to configure the Memcached connection. At a minimum you must connect to one or more Memcached servers via the `addServer()` or `addServers()` methods.
 >
 > Reference the [PHP Memcached documentation](https://secure.php.net/manual/en/book.memcached.php) for Memcached configuration options.
 
-<dl>
-    <dt><strong>Default value</strong></dt>
-    <dd>Connects to a server at <code>localhost:11211</code></dd>
-</dl>
+**Default value**Connects to a server at `localhost:11211`
 
----
-
-### `redis_host`
+## `redis_host`
 
 > The Redis server hostname or IP address.
 
-<dl>
-    <dt><strong>Default value</strong></dt>
-    <dd><code>localhost</code></dd>
-</dl>
+**Default value**`localhost`
 
-<dl>
-    <dt><strong>Environment Variables</strong></dt>
-    <dd>
-        <code>REDIS_HOST</code>
-    </dd>
-</dl>
+**Environment Variables** `REDIS_HOST`
 
----
-
-### `redis_port`
+## `redis_port`
 
 > The Redis server port.
 
-<dl>
-    <dt><strong>Default value</strong></dt>
-    <dd><code>6379</code></dd>
-</dl>
+**Default value**`6379`
 
-<dl>
-    <dt><strong>Environment Variables</strong></dt>
-    <dd>
-        <code>REDIS_PORT</code>
-    </dd>
-</dl>
+**Environment Variables** `REDIS_PORT`
 
----
-
-### `redis_config`
+## `redis_config`
 
 > The Redis configuration closure. This option is used when the `cache_driver` configuration option is set to `redis`. The closure receives a Redis object as it's only parameter. You can use this object to configure the Redis connection. At a minimum you must connect to one or more Redis servers via the `connect()` or `pconnect()` methods.
 >
 > Reference the [phpredis documentation](https://github.com/phpredis/phpredis#readme) for Redis configuration options.
 
-<dl>
-    <dt><strong>Default value</strong></dt>
-    <dd>Connects to a server at <code>localhost:6379</code></dd>
-</dl>
+**Default value**Connects to a server at `localhost:6379`
 
----
+## `http_expires`
 
-### `http_expires`
+> HTTP expires values. An array of mimetypes mapped to their cache duration values.
 
-> HTTP expires values.
-> An array of mimetypes mapped to their cache duration values.
+**Possible values** An array of [mime types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) mapped to their cache duration as a [relative datetime string](https://www.php.net/manual/en/datetime.formats.relative.php).
 
-<dl>
-    <dt><strong>Possible values</strong></dt>
-    <dd>
-        An array of <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">mime types</a>
-        mapped to their cache duration as a <a href="https://www.php.net/manual/en/datetime.formats.relative.php">relative datetime string</a>.
-    </dd>
-</dl>
+**Default value**
 
-<dl>
-    <dt><strong>Default value</strong></dt>
-    <dd>
-<pre style="white-space: pre;"><code>[
+```text
+[
     'application/zip' => '+1 hour',
     'text/json' => '+1 hour',
-]</code></pre>
-    </dd>
-</dl>
+]
+```
 
----
-
-### `view_cache`
+## `view_cache`
 
 > Path to the view cache directory. Set to 'false' to disable view caching entirely.
 
-<dl>
-    <dt><strong>Possible values</strong></dt>
-    <dd>A directory path as a string or <code>false</code> to disable the view cache entirely</dd>
-</dl>
+**Possible values**A directory path as a string or `false` to disable the view cache entirely
 
-<dl>
-    <dt><strong>Default value</strong></dt>
-    <dd><code>app/cache/views</code></dd>
-</dl>
+**Default value**`app/cache/views`
 
-<dl>
-    <dt><strong>Environment Variable</strong></dt>
-    <dd><code>VIEW_CACHE</code></dd>
-</dl>
+**Environment Variable**`VIEW_CACHE`
+
