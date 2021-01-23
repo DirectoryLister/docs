@@ -95,12 +95,12 @@ function (Memcached $memcached): void {
 
 {% tab title="Default Value" %}
 ```php
-'memcached_config' => DI\value(function (Memcached $memcached, Config $config): void {
+DI\value(function (Memcached $memcached, Config $config): void {
     $memcached->addServer(
         $config->get('memcached_host'),
         $config->get('memcached_port')
     );
-}),
+})
 ```
 
 This closure adds a single connection to a server at the host defined by [`memcached_host`](cache-config-reference.md#memcached_host) on the port defined by [`memcached_port`](cache-config-reference.md#memcached_port).
@@ -168,12 +168,12 @@ function (Redis $redis): void {
 
 {% tab title="Default Value" %}
 ```php
-'redis_config' => DI\value(function (Redis $redis, Config $config): void {
+DI\value(function (Redis $redis, Config $config): void {
     $redis->pconnect(
         $config->get('redis_host'),
         $config->get('redis_port')
     );
-}),
+})
 ```
 
 This closure adds a single connection to a server at the host defined by [`redis_host`](cache-config-reference.md#redis_host) on the port defined by [`redis_port`](cache-config-reference.md#redis_port).
