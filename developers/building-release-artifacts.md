@@ -1,6 +1,6 @@
 # Building Release Artifacts
 
-Release artifacts will build in the `artifacts` directory.
+[Make](https://www.gnu.org/software/make/) is required to run the release artifact creation commands and will build in the `artifacts` directory.
 
 ### Build All
 
