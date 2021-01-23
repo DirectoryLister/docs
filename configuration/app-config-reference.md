@@ -353,20 +353,6 @@ Any string
 
 Sorting order of files and folders. Can be one of several predefined values or a custom [anonymous function](https://www.php.net/manual/en/functions.anonymous.php).
 
-{% tabs %}
-{% tab title="Possible Values" %}
-`type`, `natural`, `name`, `accessed`, `changed`, `modified`, `<anonymous function>`
-{% endtab %}
-
-{% tab title="Default Value" %}
-`type`
-{% endtab %}
-
-{% tab title="Environment Variable" %}
-`SORT_ORDER`
-{% endtab %}
-
-{% tab title="Anonymous Functions" %}
 When using an anonymous function it must be wrapped in a `\DI\value()` function. The anonymous function receives two `\SplFileInfo` objects as arguments and expects an integer to be returned.
 
 #### Example
@@ -378,6 +364,18 @@ When using an anonymous function it must be wrapped in a `\DI\value()` function.
     })
 );
 ```
+
+{% tabs %}
+{% tab title="Possible Values" %}
+`type`, `natural`, `name`, `accessed`, `changed`, `modified`, `<anonymous function>`
+{% endtab %}
+
+{% tab title="Default Value" %}
+`type`
+{% endtab %}
+
+{% tab title="Environment Variable" %}
+`SORT_ORDER`
 {% endtab %}
 {% endtabs %}
 
