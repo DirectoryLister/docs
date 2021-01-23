@@ -1,11 +1,5 @@
 # Development Environment
 
-{% hint style="info" %}
-These instructions are for setting up a local DEVELOPMENT environment. If you are looking for basic installation instruction see the [Installation](../getting-started/installation.md) page instead.
-{% endhint %}
-
-## Setting up a Local Development Environment
-
 ### Requirements
 
 * [PHP](https://php.net) &gt;= 7.4
@@ -15,6 +9,10 @@ These instructions are for setting up a local DEVELOPMENT environment. If you ar
   * [Docker Compose](https://docs.docker.com/compose/)
 
 ### Instructions
+
+{% hint style="info" %}
+These instructions are for setting up a local DEVELOPMENT environment. If you are looking for basic installation instruction see the [Installation](../getting-started/installation.md) page instead.
+{% endhint %}
 
 1. [Fork the Directory Lister repository to your own account](https://github.com/DirectoryLister/DirectoryLister/fork)
 2. [Clone your fork to a local repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
