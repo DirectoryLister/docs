@@ -60,10 +60,6 @@ Any string
 
 The Memcached server port.
 
-**Default value**`11211`
-
-**Environment Variables** `MEMCACHED_PORT`
-
 {% tabs %}
 {% tab title="Possible Values" %}
 Any valid port as an integer \(`0` to `65353`\)
