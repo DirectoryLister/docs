@@ -23,4 +23,6 @@
 ## Developers
 
 * [Development Environment](developers/development-environment.md)
+* [Code Analysis & Testing](developers/codae-analysis-and-testing.md)
+* [Building Release Artifacts](developers/building-release-artifacts.md)
 
