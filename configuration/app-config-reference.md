@@ -104,6 +104,10 @@ A string in the format of `UA-123456789-0` or `false` to disable
 
 File containing hidden file definitions. Will be merged with definitions from the 'hidden\_files' configuration option.
 
+{% hint style="info" %}
+See the [Hiding Files](hiding-files.md) page for additional info on hiding files.
+{% endhint %}
+
 {% tabs %}
 {% tab title="Possible Values" %}
 A path \(string\) to a file
