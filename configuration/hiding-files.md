@@ -50,5 +50,5 @@ The following assertions can be use to assert that a path is followed by or not 
 
 **`file.{yml,yaml}`** Matches a file or folder named `file.yml` or `file.yaml` in the root folder
 
-**`file.tar(!.{gz|xz}$)`** Matches a file named `file.tar` or `file.tar.bz` but not `file.tar.gz` or `file.tar.xz`
+**`file.tar(!.{gz,xz})`** Matches a file named `file.tar` or `file.tar.bz` but not `file.tar.gz` or `file.tar.xz`
 
