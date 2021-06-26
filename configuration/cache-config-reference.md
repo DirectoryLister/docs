@@ -30,11 +30,29 @@ Any positive integer
 {% endtab %}
 
 {% tab title="Default Value" %}
-`0` \(indefinitely\)
+`60` \(one hour\)
 {% endtab %}
 
 {% tab title="Environment Variable" %}
 `CACHE_LIFETIME`
+{% endtab %}
+{% endtabs %}
+
+## `cache_lottery`
+
+Some cache drivers require manually pruning the cache periodically to remove expired items. This is the percentage chance \(out of 100\) of a request "winning" the lottery causing the cache to be pruned.
+
+{% tabs %}
+{% tab title="Possible Values" %}
+Any integer betweeen `1` and `100`
+{% endtab %}
+
+{% tab title="Default Value" %}
+`2`
+{% endtab %}
+
+{% tab title="Environment Variable" %}
+`CACHE_LOTTERY`
 {% endtab %}
 {% endtabs %}
 
