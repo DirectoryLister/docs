@@ -202,20 +202,20 @@ Uses the `REDIS_HOST` and `REDIS_PORT` variables by default
 {% endtab %}
 {% endtabs %}
 
-## `http_expires`
+## `http_cache`
 
-HTTP expires values. An array of mimetypes mapped to their cache duration values.
+HTTP cache values for controlling browser page cache durations. An array of mimetypes mapped to their cache duration in seconds..
 
 {% tabs %}
 {% tab title="Possible Values" %}
-An array of [mime types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) mapped to their cache duration as a [relative datetime string](https://www.php.net/manual/en/datetime.formats.relative.php).
+An array of [mime types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) mapped to their cache duration as a seconds \(integers\).
 {% endtab %}
 
 {% tab title="Defualt Value" %}
 ```php
 [
-    'application/zip' => '+1 hour',
-    'text/json' => '+1 hour',
+    'application/json' => 300,
+    'application/zip' => 300,
 ]
 ```
 {% endtab %}
