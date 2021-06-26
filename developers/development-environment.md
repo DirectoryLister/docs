@@ -34,25 +34,13 @@ These instructions are for setting up a local DEVELOPMENT environment. If you ar
    npm install && npm run dev
    ```
 
-5. Create the Docker `development` network
-
-   ```text
-   docker network create development
-   ```
-
-6. Create the Docker development proxy
-
-   ```text
-   docker run -d -p 80:80 --network development --restart unless-stopped --volume /var/run/docker.sock:/tmp/docker.sock:ro --name dev-proxy jwilder/nginx-proxy
-   ```
-
-7. Add the following entry to `/etc/hosts`:
+5. Add the following entry to `/etc/hosts`:
 
    ```text
    127.0.0.1  directory-lister.local
    ```
 
-8. Run the local Docker container
+6. Run the local Docker container
 
    ```text
    docker-compose up -d
