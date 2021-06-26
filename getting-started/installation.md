@@ -8,7 +8,7 @@ If you're upgrading from Directory Lister 2.X see the [Upgrade Guide](upgrade-gu
 
 ## Requirements
 
-* Directory Lister requires [PHP](https://www.php.net/) 7.2+
+* Directory Lister requires [PHP](https://www.php.net/) 7.3+
   * The [Zip](https://www.php.net/manual/en/book.zip.php) extension is required for zip downloads
   * The [DOM](https://www.php.net/en/dom) and [Fileinfo](https://www.php.net/manual/en/book.fileinfo.php) extensions are required for README rendering
 
