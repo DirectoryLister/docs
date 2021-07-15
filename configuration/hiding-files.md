@@ -31,7 +31,7 @@ Hidden file definitions are _case sensitive_. This means that `foo.txt` and `Foo
 
 ### Assertions
 
-The following assertions can be use to assert that a path is followed by or not followed by another pattern.
+The following assertions can be used to assert that a path is followed by or not followed by another pattern.
 
 * `(=foo)` matches any file name that also contains `foo`
 * `(!foo)` matches any file name that does not also contain `foo`
