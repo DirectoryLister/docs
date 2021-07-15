@@ -6,14 +6,14 @@ Apply coding standards to all application and tests files
 
 ```text
 app/vendor/bin/php-cs-fixer fix
-npx eslint --fix app/resources/js/**/*.{js.vue}
+npx eslint --fix app/resources/js/**/*.js
 ```
 
 or to see the changes before applying
 
 ```text
 app/vendor/bin/php-cs-fixer fix --diff --dry-run
-npx eslint app/resources/js/**/*.{js.vue}
+npx eslint app/resources/js/**/*.js
 ```
 
 ### Static Analysis
