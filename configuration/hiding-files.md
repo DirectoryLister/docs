@@ -1,6 +1,6 @@
 # Hiding Files
 
-By default Directory Lister will look for a `.hidden` file in the app root directory \(the same place as `index.php`\). If found, each line of this file will be used as an ignore pattern. Each line should contain a single file or path pattern with no end-of-line delimiter.
+By default Directory Lister will look for a `.hidden` file in the app root directory \(the same place as `index.php`\). If found, each line of this file will be used as an [ignore pattern](hiding-files.md#ignore-patterns). Each line should contain a single file or path pattern with no end-of-line delimiter.
 
 {% hint style="info" %}
 The `.hidden` file does not exist by default and must be created to be used.
@@ -12,7 +12,11 @@ You can configure the `.hidden` file name via the [`hidden_file_list`](app-confi
 
 ## Ignore Patterns
 
-An ignore pattern is a path to a file or folder that may contain one or more of the following special expressions. A pattern matching a folder path will cause all files and folders within that folder to be hidden as well as the folder itself.
+An ignore pattern is a path to a file or folder that may contain one or more of the following special expressions.
+
+{% hint style="warning" %}
+Hidden file definitions are _case sensitive_. This means that `foo.txt` and `Foo.txt` are _not_ the same.
+{% endhint %}
 
 ### Matching Expressions
 
@@ -31,6 +35,10 @@ The following assertions can be use to assert that a path is followed by or not 
 
 * `(=foo)` matches any file name that also contains `foo`
 * `(!foo)` matches any file name that does not also contain `foo`
+
+### Folders
+
+A pattern matching a folder path will cause all files and folders within that folder to be hidden as well as the folder itself.
 
 ## Examples
 
