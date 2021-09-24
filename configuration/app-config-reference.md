@@ -191,6 +191,24 @@ Hide application specific files/directories \(i.e. `index.php` and the `app` fol
 {% endtab %}
 {% endtabs %}
 
+## hide\_dot\_files
+
+Hide dot files/directories from the listing.
+
+{% tabs %}
+{% tab title="Possible Values" %}
+`true` or `false`
+{% endtab %}
+
+{% tab title="Default Value" %}
+`true`
+{% endtab %}
+
+{% tab title="Environment Variable" %}
+`HIDE_DOT_FILES`
+{% endtab %}
+{% endtabs %}
+
 ## `hide_vcs_files`
 
 Hide the files Version Control Systems \(i.e. Git and Mercurial\) use to store their metadata.

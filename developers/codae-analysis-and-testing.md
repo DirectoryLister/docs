@@ -1,6 +1,6 @@
 # Code Analysis & Testing
 
-### Coding Standards
+## Coding Standards
 
 Apply coding standards to all application and tests files
 
@@ -16,19 +16,19 @@ app/vendor/bin/php-cs-fixer fix --diff --dry-run
 npx eslint app/resources/js/**/*.js
 ```
 
-### Static Analysis
+## Static Analysis
 
 ```text
 app/vendor/bin/psalm
 ```
 
-### Unit/Feature Tests
+## Unit/Feature Tests
 
 ```text
 app/vendor/bin/phpunit
 ```
 
-### Code Coverage
+## Code Coverage
 
 ```text
 app/vendor/bin/phpunit --coverage-text
