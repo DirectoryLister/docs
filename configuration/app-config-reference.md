@@ -7,7 +7,7 @@ The app config is located at `app/config/app.php`. These options control core ap
 Control whether or not the container is compiled.
 
 {% hint style="info" %}
-There is no corresponding configuration option for this value in the `app/config` definitions because this option is applied _before_ the application container (and configuration) is loaded.
+There is no corresponding configuration option for this value in the`app/config` definitions because this option is applied _before_ the application container \(and configuration\) is loaded.
 {% endhint %}
 
 {% tabs %}
@@ -21,6 +21,28 @@ There is no corresponding configuration option for this value in the `app/config
 
 {% tab title="Environment Variable" %}
 `COMPILE_CONTAINER`
+{% endtab %}
+{% endtabs %}
+
+## `dark_mode`
+
+Enable dark mode.
+
+{% hint style="warning" %}
+Removed with the introduction of the user-facing theme toggle in v3.7.0
+{% endhint %}
+
+{% tabs %}
+{% tab title="Possible Values" %}
+`true` or `false`
+{% endtab %}
+
+{% tab title="Default Value" %}
+`false`
+{% endtab %}
+
+{% tab title="Environment Variable" %}
+`DARK_MODE`
 {% endtab %}
 {% endtabs %}
 
@@ -110,7 +132,7 @@ See the [Hiding Files](hiding-files.md) page for additional info on hiding files
 
 {% tabs %}
 {% tab title="Possible Values" %}
-A path (string) to a file
+A path \(string\) to a file
 {% endtab %}
 
 {% tab title="Default Value" %}
@@ -124,7 +146,7 @@ A path (string) to a file
 
 ## `hidden_files`
 
-Array of hidden file definitions. Will be merged with definitions in the file defined in the `hidden_files_list` configuration option. Supports glob patterns (e.g. `*.txt`, `file.{yml,yaml}`, etc.).
+Array of hidden file definitions. Will be merged with definitions in the file defined in the `hidden_files_list` configuration option. Supports glob patterns \(e.g. `*.txt`, `file.{yml,yaml}`, etc.\).
 
 {% hint style="info" %}
 See the [Hiding Files](hiding-files.md) page for additional info on hiding files.
@@ -132,11 +154,11 @@ See the [Hiding Files](hiding-files.md) page for additional info on hiding files
 
 {% tabs %}
 {% tab title="Possible Values" %}
-An array of paths (strings)
+An array of paths \(strings\)
 {% endtab %}
 
 {% tab title="Default Value" %}
-`[]` (an empty array)
+`[]` \(an empty array\)
 {% endtab %}
 
 {% tab title="Example" %}
@@ -153,7 +175,7 @@ An array of paths (strings)
 
 ## `hide_app_files`
 
-Hide application specific files/directories (i.e. `index.php` and the `app` folder).
+Hide application specific files/directories \(i.e. `index.php` and the `app` folder\).
 
 {% tabs %}
 {% tab title="Possible Values" %}
@@ -189,7 +211,7 @@ Hide dot files/directories from the listing.
 
 ## `hide_vcs_files`
 
-Hide the files Version Control Systems (i.e. Git and Mercurial) use to store their metadata.
+Hide the files Version Control Systems \(i.e. Git and Mercurial\) use to store their metadata.
 
 {% tabs %}
 {% tab title="Possible Values" %}
@@ -207,7 +229,7 @@ Hide the files Version Control Systems (i.e. Git and Mercurial) use to store the
 
 ## `home_text`
 
-Text of the `home` link in the navigation breadcrumbs. If undefined or `null` will use the translated form of "home" from your selected language.
+Text of the `home` link in the navigation breadcrumbs. If undefined or `null` will use the translated form of "home" form your selected language.
 
 {% tabs %}
 {% tab title="Possible Values" %}
@@ -233,7 +255,7 @@ See the [`app/translations`](https://github.com/DirectoryLister/DirectoryLister/
 {% endtab %}
 
 {% tab title="Default Value" %}
-`en` (English)
+`en` \(English\)
 {% endtab %}
 
 {% tab title="Environment Variable" %}
@@ -247,7 +269,7 @@ Your Matomo analytics site ID.
 
 {% tabs %}
 {% tab title="Possible Values" %}
-A Matomo analytics site ID (string)
+A Matomo analytics site ID \(string\)
 {% endtab %}
 
 {% tab title="Default Value" %}
@@ -265,7 +287,7 @@ Your Matomo analytics URL.
 
 {% tabs %}
 {% tab title="Possible Values" %}
-A Matomo analytics URL (string)
+A Matomo analytics URL \(string\)
 {% endtab %}
 
 {% tab title="Default Value" %}
@@ -279,7 +301,7 @@ A Matomo analytics URL (string)
 
 ## `max_hash_size`
 
-The maximum file size (in bytes) that can be hashed. This helps to prevent timeouts for excessively large files.
+The maximum file size \(in bytes\) that can be hashed. This helps to prevent timeouts for excessively large files.
 
 {% hint style="warning" %}
 The larger a file is the longer it will take to calculate hashes for that file.
@@ -287,11 +309,11 @@ The larger a file is the longer it will take to calculate hashes for that file.
 
 {% tabs %}
 {% tab title="Possible Values" %}
-Any positive integer `0` - `9223372036854775807` ([`PHP_INT_MAX`](https://www.php.net/manual/en/reserved.constants.php#constant.php-int-max))
+Any positive integer `0` - `9223372036854775807` \([`PHP_INT_MAX`](https://www.php.net/manual/en/reserved.constants.php#constant.php-int-max)\)
 {% endtab %}
 
 {% tab title="Default Value" %}
-`1000000000` (1 GB)
+`1000000000` \(1 GB\)
 {% endtab %}
 
 {% tab title="Environment Variable" %}
@@ -301,7 +323,7 @@ Any positive integer `0` - `9223372036854775807` ([`PHP_INT_MAX`](https://www.ph
 
 ## `meta_description`
 
-Meta tag description (i.e. `<meta name="description">`) text.
+Meta tag description \(i.e. `<meta name="description">`\) text.
 
 {% tabs %}
 {% tab title="Possible Values" %}
@@ -337,7 +359,7 @@ Show READMEs before the file listing.
 
 ## `reverse_sort`
 
-When enabled, reverses the order of files (after sorting is applied).
+When enabled, reverses the order of files \(after sorting is applied\).
 
 {% tabs %}
 {% tab title="Possible Values" %}
@@ -403,11 +425,11 @@ When using an anonymous function it must be wrapped in a `\DI\value()` function.
 
 ## `timezone`
 
-Time zone used for date formatting.
+Timezone used for data formatting.
 
 {% tabs %}
 {% tab title="Possible Values" %}
-For a list of supported time zones see: [https://www.php.net/manual/en/timezones.php](https://www.php.net/manual/en/timezones.php).
+For a list of supported timezones see: [https://www.php.net/manual/en/timezones.php](https://www.php.net/manual/en/timezones.php).
 {% endtab %}
 
 {% tab title="Default Value" %}
@@ -436,3 +458,4 @@ Enable downloading of directories as a zip archive.
 `ZIP_DOWNLOADS`
 {% endtab %}
 {% endtabs %}
+
