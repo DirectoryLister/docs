@@ -7,7 +7,7 @@ The app config is located at `app/config/app.php`. These options control core ap
 Control whether or not the container is compiled.
 
 {% hint style="info" %}
-There is no corresponding configuration option for this value in the`app/config` definitions because this option is applied _before_ the application container (and configuration) is loaded.
+There is no corresponding configuration option for this value in the `app/config` definitions because this option is applied _before_ the application container (and configuration) is loaded.
 {% endhint %}
 
 {% tabs %}
@@ -21,28 +21,6 @@ There is no corresponding configuration option for this value in the`app/config`
 
 {% tab title="Environment Variable" %}
 `COMPILE_CONTAINER`
-{% endtab %}
-{% endtabs %}
-
-## `dark_mode`
-
-Enable dark mode.
-
-{% hint style="warning" %}
-Removed with the introduction of the user-facing theme toggle in v3.7.0
-{% endhint %}
-
-{% tabs %}
-{% tab title="Possible Values" %}
-`true` or `false`
-{% endtab %}
-
-{% tab title="Default Value" %}
-`false`
-{% endtab %}
-
-{% tab title="Environment Variable" %}
-`DARK_MODE`
 {% endtab %}
 {% endtabs %}
 
