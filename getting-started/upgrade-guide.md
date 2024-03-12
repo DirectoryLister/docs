@@ -1,8 +1,8 @@
 # Upgrade Guide
 
-Upgrading Directory Lister is quick and painless whether you're upgrading an existing `3.X` installation or upgrading from Directory Lister `2.X`.
+Upgrading Directory Lister is quick and painless whether you're upgrading an existing installation or upgrading from Directory Lister `2.X`.
 
-## Upgrade an existing Directory Lister 3 installation
+## Upgrade an existing Directory Lister installation
 
 1. Download the latest version of Directory Lister 3 from [https://www.directorylister.com](https://www.directorylister.com)
 2. Extract the zip/tar archive
