@@ -2,6 +2,24 @@
 
 The app config is located at `app/config/app.php`. These options control core application functionality.
 
+## `analytics_file`
+
+File containing analytics scripts that will be included in the HTML output of your directory listing.
+
+{% tabs %}
+{% tab title="Possible Values" %}
+A (string) file name
+{% endtab %}
+
+{% tab title="Default Value" %}
+`.analytics`
+{% endtab %}
+
+{% tab title="Environment Variables" %}
+`ANALYTICS_FILE`
+{% endtab %}
+{% endtabs %}
+
 ## `compile_container`
 
 Control whether or not the container is compiled.
@@ -85,6 +103,10 @@ Parse and render `README` files on the page.
 ## `google_analytics_id`
 
 Your Google analytics tracking ID.
+
+{% hint style="danger" %}
+This configuration option has been deprecated and will stop working in a future release. See the [Analytics Script Injection](configuration-overview.md#analytics-script-injection) section for instructions on configuring analytics tracking.
+{% endhint %}
 
 {% tabs %}
 {% tab title="Possible Values" %}
@@ -245,6 +267,10 @@ See the [`app/translations`](https://github.com/DirectoryLister/DirectoryLister/
 
 Your Matomo analytics site ID.
 
+{% hint style="danger" %}
+This configuration option has been deprecated and will stop working in a future release. See the [Analytics Script Injection](configuration-overview.md#analytics-script-injection) section for instructions on configuring analytics tracking.
+{% endhint %}
+
 {% tabs %}
 {% tab title="Possible Values" %}
 A Matomo analytics site ID (string)
@@ -262,6 +288,10 @@ A Matomo analytics site ID (string)
 ## `matomo_analytics_url`
 
 Your Matomo analytics URL.
+
+{% hint style="danger" %}
+This configuration option has been deprecated and will stop working in a future release. See the [Analytics Script Injection](configuration-overview.md#analytics-script-injection) section for instructions on configuring analytics tracking.
+{% endhint %}
 
 {% tabs %}
 {% tab title="Possible Values" %}

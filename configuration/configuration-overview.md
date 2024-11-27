@@ -11,7 +11,7 @@ Most configuration changes are possible via a custom `.env` file. This file defi
 
 Your default `.env` file should look something like this:
 
-```text
+```
 APP_DEBUG=false
 APP_LANGUAGE=en
 
@@ -46,3 +46,8 @@ You can control your application icon mapping through the icon config file.
 
 Reference the [Icon Configuration](icon-configuration.md) for more information on configuring icons.
 
+## Analytics Script Injection
+
+Directory Lister allows for including arbitrary analytics tracking script (e.g. from [Google Analytics](https://analytics.google.com), [Matomo Analytics](https://matomo.org/), [Umami Analytics](https://umami.is/) or any other analytics service) to be included in the HTML output of your directory listing.
+
+To inject your analytics tracking code into your page create a file named `.analytics` in the base project directory (the same folder as `index.php`) and place your analytics tracking script code into this file.
