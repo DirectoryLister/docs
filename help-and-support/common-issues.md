@@ -30,6 +30,78 @@ This was an issue with the v3.4.0 release. The issue was promptly resolved with 
 rm -rf app/cache/*
 ```
 
+## Error 500 when visiting the server (apache2 only)
+
+### Symptoms
+
+Your server doesn't respond when visiting the page with Directory Lister installed.
+
+### Explanation
+
+Check if you have all dependencies related to Directory Lister installed. If you have, check your server logs.
+
+On Apache2:
+
+```text
+cat /var/log/apache2/error.log
+```
+
+Check if you have entries that should look something like this (ignore the date and IP part):
+
+```text
+[Sun Jan 1 00:00:00.000000 2000] [php:error] [pid 0] [client 192.168.1.1:20000] PHP Fatal error:  Uncaught InvalidArgumentException: Compilation directory is not writable: /var/www/html/app/cache. in /var/www/html/app/vendor/php-di/php-di/src/Compiler/Compiler.php:345\nStack trace:\n#0 /var/www/html/app/vendor/php-di/php-di/src/Compiler/Compiler.php(160): DI\\Compiler\\Compiler->createCompilationDirectory()\n#1 /var/www/html/app/vendor/php-di/php-di/src/ContainerBuilder.php(144): DI\\Compiler\\Compiler->compile()\n#2 /var/www/html/app/src/Bootstrap/BootManager.php(22): DI\\ContainerBuilder->build()\n#3 /var/www/html/index.php(16): App\\Bootstrap\\BootManager::createContainer()\n#4 {main}\n  thrown in /var/www/html/app/vendor/php-di/php-di/src/Compiler/Compiler.php on line 345
+```
+
+It seems that the cache directory is unwritable by the www-data/apache user, so we need to give some permissions. First, check if the /var/www/html/app/cache directory exists:
+
+```text
+ls -ld /var/www/html/app/cache
+```
+
+If it does not exist, create it:
+
+```text
+sudo mkdir -p /var/www/html/app/cache
+```
+
+To set the correct ownership, first ensure the directory is owned by the Apache user and group:
+
+#### Ubuntu / Debian
+
+```text
+sudo chown -R www-data:www-data /var/www/html/app/cache
+```
+
+#### Fedora / Redhat
+
+```text
+sudo chown -R apache:apache /var/www/html/app/cache
+```
+
+Then set the correct permissions:
+
+```text
+sudo chmod -R 775 /var/www/html/app/cache
+```
+
+With everything set up, feel free to restart your Apache server with this command to apply any changes:
+
+#### Ubuntu / Debian
+
+```text
+sudo systemctl restart apache2
+```
+
+#### Fedora / Redhat
+
+```text
+sudo systemctl restart httpd
+```
+
+Test the application to ensure the error is resolved. If the issue persists, double-check the logs and permissions.
+
+Note: granting write permissions should only be done with caution. Ensure that the cache directory is isolated and secure to avoid potential vulnerabilities. If you still encounter issues, check the PHP configuration (php.ini) for restrictions related to file writes or open_basedir.
+
 ## `Class 'DOMDocument' not found`
 
 ### Symptoms
