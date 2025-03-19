@@ -1,8 +1,52 @@
 # App Config Reference
 
-The app config is located at `app/config/app.php`. These options control core application functionality.
+## Bootstrap Configuration
 
-## `analytics_file`
+These configuration options are special configuration options only configurable through environment variables (e.g. through the `.env` file).
+
+{% hint style="info" %}
+There are no corresponding configuration options for these values in the `app/config` definitions because they are applied _before_ the application container (and configuration) is loaded.
+{% endhint %}
+
+### `FILES_PATH`&#x20;
+
+A path (relative or absolute) to the directory in which you would like to list. This may even be a path outside of the application directory. When left unset, the root application directory (i.e. the folder where `index.php` is located) will be listed.
+
+{% tabs %}
+{% tab title="Possible Values" %}
+An absolute or relative file path (string)
+{% endtab %}
+
+{% tab title="Default Value" %}
+`<unset>`
+{% endtab %}
+{% endtabs %}
+
+### `COMPILE_CONTAINER`&#x20;
+
+**Default value:** `true`
+
+Whether or not the application container will be compiled. When set to `false` the container will _not_ be compiled and cached. If left unset the container will be compiled and cached on first run and the cached container will be reused on subsequent requests. Disabling this comes with a (likely negligible) performance hit. Generally this should not be changed but might be necessary to modify when running Directory Lister on a read-only filesystem.
+
+{% tabs %}
+{% tab title="Possible Values" %}
+`false` or `<unset>`
+{% endtab %}
+
+{% tab title="Default Value" %}
+`<unset>`
+{% endtab %}
+{% endtabs %}
+
+## Runtime Configuration
+
+General runtime configuration is controlled by the app config located at `app/config/app.php`. These options control core application functionality.
+
+{% hint style="warning" %}
+It is highly recommended to set these values via their respective environment variables. This can be accomplished via a `.env` file located in the root of your application. An example file is provided as `.env.example`.
+{% endhint %}
+
+### `analytics_file`
 
 File containing analytics scripts that will be included in the HTML output of your directory listing.
 
@@ -20,29 +64,7 @@ A (string) file name
 {% endtab %}
 {% endtabs %}
 
-## `compile_container`
-
-Control whether or not the container is compiled.
-
-{% hint style="info" %}
-There is no corresponding configuration option for this value in the `app/config` definitions because this option is applied _before_ the application container (and configuration) is loaded.
-{% endhint %}
-
-{% tabs %}
-{% tab title="Possible Values" %}
-`false` or `<unset>`
-{% endtab %}
-
-{% tab title="Default Value" %}
-`<unset>`
-{% endtab %}
-
-{% tab title="Environment Variable" %}
-`COMPILE_CONTAINER`
-{% endtab %}
-{% endtabs %}
-
-## `date_format`
+### `date_format`
 
 The format used for rendering dates in the application views.
 
@@ -60,7 +82,7 @@ See the [PHP `date` format documentation](https://www.php.net/manual/en/function
 {% endtab %}
 {% endtabs %}
 
-## `debug`
+### `debug`
 
 Enable application debugging and display error messages.
 
@@ -82,7 +104,7 @@ It is recommended that debug remains OFF unless troubleshooting an issue. Leavin
 {% endtab %}
 {% endtabs %}
 
-## `display_readmes`
+### `display_readmes`
 
 Parse and render `README` files on the page.
 
@@ -100,7 +122,7 @@ Parse and render `README` files on the page.
 {% endtab %}
 {% endtabs %}
 
-## `google_analytics_id`
+### `google_analytics_id`
 
 Your Google analytics tracking ID.
 
@@ -122,7 +144,7 @@ A string in the format of `UA-123456789-0` or `false` to disable
 {% endtab %}
 {% endtabs %}
 
-## `hidden_files_list`
+### `hidden_files_list`
 
 File containing hidden file definitions. Will be merged with definitions from the 'hidden\_files' configuration option.
 
@@ -144,7 +166,7 @@ A path (string) to a file
 {% endtab %}
 {% endtabs %}
 
-## `hidden_files`
+### `hidden_files`
 
 Array of hidden file definitions. Will be merged with definitions in the file defined in the `hidden_files_list` configuration option. Supports glob patterns (e.g. `*.txt`, `file.{yml,yaml}`, etc.).
 
@@ -173,7 +195,7 @@ An array of paths (strings)
 {% endtab %}
 {% endtabs %}
 
-## `hide_app_files`
+### `hide_app_files`
 
 Hide application specific files/directories (i.e. `index.php` and the `app` folder).
 
@@ -191,7 +213,7 @@ Hide application specific files/directories (i.e. `index.php` and the `app` fold
 {% endtab %}
 {% endtabs %}
 
-## hide\_dot\_files
+### `hide_dot_files`
 
 Hide dot files/directories from the listing.
 
@@ -209,7 +231,7 @@ Hide dot files/directories from the listing.
 {% endtab %}
 {% endtabs %}
 
-## `hide_vcs_files`
+### `hide_vcs_files`
 
 Hide the files Version Control Systems (i.e. Git and Mercurial) use to store their metadata.
 
@@ -227,7 +249,7 @@ Hide the files Version Control Systems (i.e. Git and Mercurial) use to store the
 {% endtab %}
 {% endtabs %}
 
-## `home_text`
+### `home_text`
 
 Text of the `home` link in the navigation breadcrumbs. If undefined or `null` will use the translated form of "home" from your selected language.
 
@@ -245,7 +267,7 @@ Any string
 {% endtab %}
 {% endtabs %}
 
-## `language`
+### `language`
 
 The application's interface language.
 
@@ -263,7 +285,7 @@ See the [`app/translations`](https://github.com/DirectoryLister/DirectoryLister/
 {% endtab %}
 {% endtabs %}
 
-## `matomo_analytics_site_id`
+### `matomo_analytics_site_id`
 
 Your Matomo analytics site ID.
 
@@ -285,7 +307,7 @@ A Matomo analytics site ID (string)
 {% endtab %}
 {% endtabs %}
 
-## `matomo_analytics_url`
+### `matomo_analytics_url`
 
 Your Matomo analytics URL.
 
@@ -307,7 +329,7 @@ A Matomo analytics URL (string)
 {% endtab %}
 {% endtabs %}
 
-## `max_hash_size`
+### `max_hash_size`
 
 The maximum file size (in bytes) that can be hashed. This helps to prevent timeouts for excessively large files.
 
@@ -329,7 +351,7 @@ Any positive integer `0` - `9223372036854775807` ([`PHP_INT_MAX`](https://www.ph
 {% endtab %}
 {% endtabs %}
 
-## `meta_description`
+### `meta_description`
 
 Meta tag description (i.e. `<meta name="description">`) text.
 
@@ -347,7 +369,7 @@ Any string
 {% endtab %}
 {% endtabs %}
 
-## `readmes_first`
+### `readmes_first`
 
 Show READMEs before the file listing.
 
@@ -365,7 +387,7 @@ Show READMEs before the file listing.
 {% endtab %}
 {% endtabs %}
 
-## `reverse_sort`
+### `reverse_sort`
 
 When enabled, reverses the order of files (after sorting is applied).
 
@@ -383,7 +405,7 @@ When enabled, reverses the order of files (after sorting is applied).
 {% endtab %}
 {% endtabs %}
 
-## `site_title`
+### `site_title`
 
 The title of your directory listing. This will be displayed in the browser tab/title bar along with the current path.
 
@@ -401,7 +423,7 @@ Any string
 {% endtab %}
 {% endtabs %}
 
-## `sort_order`
+### `sort_order`
 
 Sorting order of files and folders. Can be one of several predefined values or a custom [anonymous function](https://www.php.net/manual/en/functions.anonymous.php).
 
@@ -431,7 +453,7 @@ When using an anonymous function it must be wrapped in a `\DI\value()` function.
 {% endtab %}
 {% endtabs %}
 
-## `timezone`
+### `timezone`
 
 Time zone used for date formatting.
 
@@ -449,7 +471,7 @@ The server's timezone
 {% endtab %}
 {% endtabs %}
 
-## `zip_downloads`
+### `zip_downloads`
 
 Enable downloading of directories as a zip archive.
 
@@ -467,7 +489,7 @@ Enable downloading of directories as a zip archive.
 {% endtab %}
 {% endtabs %}
 
-## &#x20;`zip_compress`
+### &#x20;`zip_compress`
 
 Compress Zip using Deflate. Enabling this option prevents file size estimation and it may prevent zip download resuming when paused.
 
@@ -484,3 +506,4 @@ Compress Zip using Deflate. Enabling this option prevents file size estimation a
 `ZIP_COMPRESS`
 {% endtab %}
 {% endtabs %}
+

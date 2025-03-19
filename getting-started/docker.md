@@ -1,0 +1,90 @@
+# Docker
+
+Starting with Directory Lister v5.0 an [official Docker image is provided](https://hub.docker.com/repository/docker/phlak/directory-lister) (`phlak/directory-lister`).
+
+## Running with `docker run`
+
+```bash
+docker run --detach [--env ENVIRONMENT_VARIABLE=value] \
+    --volume <host_path>:/data --publish <host_port>:80 \
+    phlak/directory-lister:5.0.0
+```
+
+{% hint style="warning" %}
+Replace `<host_path>` with the path to the directory you'd like to list.
+
+Replace `<host_port>` with the port you would like to expose the application on.
+{% endhint %}
+
+{% hint style="info" %}
+You may pass one or more environment variables with multiple `--env` flags.
+
+See the [App Config](../configuration/app-config-reference.md) or the [Cache Config](../configuration/cache-config-reference.md) references for the available environment variables.
+{% endhint %}
+
+## Running with `docker compose`
+
+The following is an example `docker-compose.yaml` file. For more information on `docker compose` and how to use this file see the [Docker Compose documentation](https://docs.docker.com/compose/).
+
+{% code title="docker-compose.yaml" %}
+```yaml
+services:
+
+  directory-lister:
+    image: phlak/directory-lister:5.0.0
+    environment:
+      # APP_LANGUAGE: en
+      # DISPLAY_READMES: true
+      # READMES_FIRST: false
+      # ZIP_DOWNLOADS: true
+      # TIMEZONE: America/Phoenix
+      # See configuration docs for additional variables
+    ports:
+      - <host_port>:80
+    volumes:
+      - <host_path>:/data
+    restart: unless-stopped
+```
+{% endcode %}
+
+{% hint style="warning" %}
+Replace `<host_path>` with the path to the directory you'd like to list.
+
+Replace `<host_port>` with the port you would like to expose the application on.
+{% endhint %}
+
+{% hint style="info" %}
+See the [App Config](../configuration/app-config-reference.md) or the [Cache Config](../configuration/cache-config-reference.md) references for the available environment variables.
+{% endhint %}
+
+### Advanced `docker compose` usage&#x20;
+
+The following is an example `docker-compose.yaml` file showing Directory Lister being run with a redis container for caching.
+
+{% code title="docker-compose.yaml" %}
+```yaml
+services:
+
+  directory-lister:
+    image: phlak/directory-lister:5.0.0
+    environment:
+      REDIS_HOSTNAME: redis
+      # See configuration docs for additional variables
+    ports:
+      - <host_port>:80
+    volumes:
+      - <host_path>:/data
+    depends_on: [redis]
+    restart: unless-stopped
+
+  redis:
+    image: redis:7.4
+    restart: unless-stopped
+```
+{% endcode %}
+
+{% hint style="warning" %}
+Replace `<host_path>` with the path to the directory you'd like to list.
+
+Replace `<host_port>` with the port you would like to expose the application on.
+{% endhint %}

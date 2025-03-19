@@ -5,6 +5,7 @@
 ## Getting Started
 
 * [Installation](getting-started/installation.md)
+* [Docker](getting-started/docker.md)
 * [Upgrade Guide](getting-started/upgrade-guide.md)
 
 ## Configuration
@@ -25,4 +26,3 @@
 * [Development Environment](developers/development-environment.md)
 * [Code Analysis & Testing](developers/codae-analysis-and-testing.md)
 * [Building Release Artifacts](developers/building-release-artifacts.md)
-

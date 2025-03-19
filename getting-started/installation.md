@@ -4,7 +4,7 @@ Installation of Directory Lister is fast and requires no configuration.
 
 ## Requirements
 
-* Directory Lister requires [PHP](https://www.php.net/) 8.1+
+* Directory Lister requires [PHP](https://www.php.net/) 8.2+
   * The [Zip](https://www.php.net/manual/en/book.zip.php) extension is required for zip downloads
   * The [DOM](https://www.php.net/en/dom) and [Fileinfo](https://www.php.net/manual/en/book.fileinfo.php) extensions are required for README rendering
 

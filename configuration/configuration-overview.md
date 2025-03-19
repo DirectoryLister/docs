@@ -4,6 +4,10 @@ Directory Lister is customizable through configuration. You can configure Direct
 
 ## The `.env` File
 
+{% hint style="success" %}
+This is the recommended method of configuring Directory Lister.
+{% endhint %}
+
 Most configuration changes are possible via a custom `.env` file. This file defines environment variables and their value. To get started:
 
 1. Copy `.env.example` to `.env`
@@ -14,6 +18,8 @@ Your default `.env` file should look something like this:
 ```
 APP_DEBUG=false
 APP_LANGUAGE=en
+
+# FILES_PATH=
 
 DISPLAY_READMES=true
 READMES_FIRST=false

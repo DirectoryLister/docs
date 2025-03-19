@@ -2,7 +2,11 @@
 
 The cache config is located at `app/config/cache.php`. These options control the application cache.
 
-## `cache_driver`
+{% hint style="warning" %}
+It is highly recommended to set these values via their respective environment variables. This can be accomplished via a `.env` file located in the root of your application. An example file is provided as `.env.example`.
+{% endhint %}
+
+### `cache_driver`
 
 The application cache driver. Setting this value to `array` will disable the cache across requests. Additional driver-specific options may be required with certain values.
 
@@ -20,9 +24,9 @@ The application cache driver. Setting this value to `array` will disable the cac
 {% endtab %}
 {% endtabs %}
 
-## `cache_lifetime`
+### `cache_lifetime`
 
-The app cache lifetime \(in seconds\). Setting this value to `0` will cache indefinitely.
+The app cache lifetime (in seconds). Setting this value to `0` will cache indefinitely.
 
 {% tabs %}
 {% tab title="Possible values" %}
@@ -30,7 +34,7 @@ Any positive integer
 {% endtab %}
 
 {% tab title="Default Value" %}
-`60` \(one hour\)
+`60` (one hour)
 {% endtab %}
 
 {% tab title="Environment Variable" %}
@@ -38,9 +42,9 @@ Any positive integer
 {% endtab %}
 {% endtabs %}
 
-## `cache_lottery`
+### `cache_lottery`
 
-Some cache drivers require manually pruning the cache periodically to remove expired items. This is the percentage chance \(out of 100\) of a request "winning" the lottery causing the cache to be pruned.
+Some cache drivers require manually pruning the cache periodically to remove expired items. This is the percentage chance (out of 100) of a request "winning" the lottery causing the cache to be pruned.
 
 {% tabs %}
 {% tab title="Possible Values" %}
@@ -56,7 +60,7 @@ Any integer betweeen `1` and `100`
 {% endtab %}
 {% endtabs %}
 
-## `memcached_host`
+### `memcached_host`
 
 The Memcached server hostname or IP address.
 
@@ -74,13 +78,13 @@ Any string
 {% endtab %}
 {% endtabs %}
 
-## `memcached_port`
+### `memcached_port`
 
 The Memcached server port.
 
 {% tabs %}
 {% tab title="Possible Values" %}
-Any valid port as an integer \(`0` to `65353`\)
+Any valid port as an integer (`0` to `65353`)
 {% endtab %}
 
 {% tab title="Default Value" %}
@@ -92,9 +96,9 @@ Any valid port as an integer \(`0` to `65353`\)
 {% endtab %}
 {% endtabs %}
 
-## `memcached_config`
+### `memcached_config`
 
-The Memcached configuration [anonymous function](https://www.php.net/manual/en/functions.anonymous.php) \(closure\). This option is used when the `cache_driver` configuration option is set to `memcached`. The closure receives a `Memcached` object as it's only parameter. You can use this object to configure the Memcached connection. At a minimum you must connect to one or more Memcached servers via the `addServer()` or `addServers()` methods.
+The Memcached configuration [anonymous function](https://www.php.net/manual/en/functions.anonymous.php) (closure). This option is used when the `cache_driver` configuration option is set to `memcached`. The closure receives a `Memcached` object as it's only parameter. You can use this object to configure the Memcached connection. At a minimum you must connect to one or more Memcached servers via the `addServer()` or `addServers()` methods.
 
 {% hint style="info" %}
 Reference the [PHP Memcached documentation](https://secure.php.net/manual/en/book.memcached.php) for Memcached configuration options.
@@ -129,7 +133,7 @@ Uses the `MEMCACHED_HOST` and `MEMCACHED_PORT` variables by default
 {% endtab %}
 {% endtabs %}
 
-## `redis_host`
+### `redis_host`
 
 The Redis server hostname or IP address.
 
@@ -147,13 +151,13 @@ Any string
 {% endtab %}
 {% endtabs %}
 
-## `redis_port`
+### `redis_port`
 
 The Redis server port.
 
 {% tabs %}
 {% tab title="Possible Values" %}
-Any valid port as an integer \(`0` to `65353`\)
+Any valid port as an integer (`0` to `65353`)
 {% endtab %}
 
 {% tab title="Defualt Value" %}
@@ -165,9 +169,9 @@ Any valid port as an integer \(`0` to `65353`\)
 {% endtab %}
 {% endtabs %}
 
-## `redis_config`
+### `redis_config`
 
-The Redis configuration [anonymous function](https://www.php.net/manual/en/functions.anonymous.php) \(closure\). This option is used when the `cache_driver` configuration option is set to `redis`. The closure receives a `Redis` object as it's only parameter. You can use this object to configure the Redis connection. At a minimum you must connect to one or more Redis servers via the `connect()` or `pconnect()` methods.
+The Redis configuration [anonymous function](https://www.php.net/manual/en/functions.anonymous.php) (closure). This option is used when the `cache_driver` configuration option is set to `redis`. The closure receives a `Redis` object as it's only parameter. You can use this object to configure the Redis connection. At a minimum you must connect to one or more Redis servers via the `connect()` or `pconnect()` methods.
 
 {% hint style="info" %}
 Reference the [phpredis documentation](https://github.com/phpredis/phpredis#readme) for Redis configuration options.
@@ -202,13 +206,13 @@ Uses the `REDIS_HOST` and `REDIS_PORT` variables by default
 {% endtab %}
 {% endtabs %}
 
-## `http_cache`
+### `http_cache`
 
 HTTP cache values for controlling browser page cache durations. An array of mimetypes mapped to their cache duration in seconds..
 
 {% tabs %}
 {% tab title="Possible Values" %}
-An array of [mime types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) mapped to their cache duration as a seconds \(integers\).
+An array of [mime types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) mapped to their cache duration as a seconds (integers).
 {% endtab %}
 
 {% tab title="Defualt Value" %}
@@ -221,7 +225,7 @@ An array of [mime types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basic
 {% endtab %}
 {% endtabs %}
 
-## `view_cache`
+### `view_cache`
 
 Path to the view cache directory. Set to `false` to disable view caching entirely.
 
