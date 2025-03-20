@@ -44,3 +44,118 @@ These instructions are for setting up a local DEVELOPMENT environment. If you ar
     ```
 
 You should now be able to access your local Directory Lister installation at `http://localhost` (or [http://directory-lister.local](http://directory-lister.local) if you added a host name entry)
+
+## Common Development Commands
+
+### Clear the application cache
+
+{% tabs %}
+{% tab title="Shell" %}
+```sh
+rm --recursive --force app/cache/*
+```
+{% endtab %}
+
+{% tab title="Make" %}
+```sh
+make clear-cache
+```
+{% endtab %}
+{% endtabs %}
+
+### Build dependencies and assets (for production)
+
+{% tabs %}
+{% tab title="Shell" %}
+```sh
+composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+npm install --no-save
+npm run build
+npm prune --production
+```
+{% endtab %}
+
+{% tab title="Make" %}
+```sh
+make production
+```
+{% endtab %}
+{% endtabs %}
+
+
+
+```sh
+npm run build
+```
+
+### Clear built assets
+
+{% tabs %}
+{% tab title="Shell" %}
+```sh
+rm --recursive --force app/assets/*
+```
+{% endtab %}
+
+{% tab title="Make" %}
+```sh
+make clear-assets
+```
+{% endtab %}
+{% endtabs %}
+
+### Run test suite
+
+{% tabs %}
+{% tab title="Composer" %}
+```sh
+composer exec phpunit
+```
+{% endtab %}
+
+{% tab title="Make" %}
+```sh
+make tests
+```
+{% endtab %}
+{% endtabs %}
+
+### Coding Standards
+
+{% tabs %}
+{% tab title="Composer" %}
+```sh
+composer exec php-cs-fixer fix [--diff] [--dry-run]
+```
+
+{% hint style="info" %}
+If no flags are present, coding standard fixes will be automatically applied.\
+\
+To report coding standard problems _without_ modifying files use the `--dry-run` flag.\
+\
+Additionally, to display a diff of the fixes that would be applied, use the `--diff` flag as well.
+{% endhint %}
+{% endtab %}
+
+{% tab title="Make" %}
+```sh
+make coding-standards
+```
+{% endtab %}
+{% endtabs %}
+
+### Static Analysis
+
+{% tabs %}
+{% tab title="Composer" %}
+```sh
+composer exec phpstan analyze
+```
+{% endtab %}
+
+{% tab title="Make" %}
+```sh
+make static-analysis
+```
+{% endtab %}
+{% endtabs %}
