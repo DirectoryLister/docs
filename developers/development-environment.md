@@ -47,18 +47,20 @@ You should now be able to access your local Directory Lister installation at `ht
 
 ## Common Development Commands
 
+Many common development actions have been defined in the `Makefile` and can be run with `make` command.
+
 ### Clear the application cache
 
 {% tabs %}
-{% tab title="Shell" %}
-```sh
-rm --recursive --force app/cache/*
-```
-{% endtab %}
-
 {% tab title="Make" %}
 ```sh
 make clear-cache
+```
+{% endtab %}
+
+{% tab title="Manually" %}
+```sh
+rm --recursive --force app/cache/*
 ```
 {% endtab %}
 {% endtabs %}
@@ -66,7 +68,13 @@ make clear-cache
 ### Build dependencies and assets (for production)
 
 {% tabs %}
-{% tab title="Shell" %}
+{% tab title="Make" %}
+```sh
+make production
+```
+{% endtab %}
+
+{% tab title="Manually" %}
 ```sh
 composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
 npm install --no-save
@@ -74,32 +82,20 @@ npm run build
 npm prune --production
 ```
 {% endtab %}
-
-{% tab title="Make" %}
-```sh
-make production
-```
-{% endtab %}
 {% endtabs %}
-
-
-
-```sh
-npm run build
-```
 
 ### Clear built assets
 
 {% tabs %}
-{% tab title="Shell" %}
-```sh
-rm --recursive --force app/assets/*
-```
-{% endtab %}
-
 {% tab title="Make" %}
 ```sh
 make clear-assets
+```
+{% endtab %}
+
+{% tab title="Manually" %}
+```sh
+rm --recursive --force app/assets/*
 ```
 {% endtab %}
 {% endtabs %}
@@ -107,22 +103,34 @@ make clear-assets
 ### Run test suite
 
 {% tabs %}
+{% tab title="Make" %}
+```sh
+make tests
+```
+{% endtab %}
+
 {% tab title="Composer" %}
 ```sh
 composer exec phpunit
 ```
 {% endtab %}
 
-{% tab title="Make" %}
+{% tab title="Manually" %}
 ```sh
-make tests
+app/vendor/bin/phpunit
 ```
 {% endtab %}
 {% endtabs %}
 
-### Coding Standards
+### Check or fix coding standards
 
 {% tabs %}
+{% tab title="Make" %}
+```sh
+make coding-standards
+```
+{% endtab %}
+
 {% tab title="Composer" %}
 ```sh
 composer exec php-cs-fixer fix [--diff] [--dry-run]
@@ -137,25 +145,31 @@ Additionally, to display a diff of the fixes that would be applied, use the `--d
 {% endhint %}
 {% endtab %}
 
-{% tab title="Make" %}
+{% tab title="Manually" %}
 ```sh
-make coding-standards
+app/vendor/bin/php-cs-fixer fix [--diff] [--dry-run]
 ```
 {% endtab %}
 {% endtabs %}
 
-### Static Analysis
+### Perform static analysis
 
 {% tabs %}
+{% tab title="Make" %}
+```sh
+make static-analysis
+```
+{% endtab %}
+
 {% tab title="Composer" %}
 ```sh
 composer exec phpstan analyze
 ```
 {% endtab %}
 
-{% tab title="Make" %}
+{% tab title="Manually" %}
 ```sh
-make static-analysis
+app/vendor/bin/phpstan analyze
 ```
 {% endtab %}
 {% endtabs %}
