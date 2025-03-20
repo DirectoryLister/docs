@@ -24,8 +24,6 @@ An absolute or relative file path (string)
 
 ### `COMPILE_CONTAINER`&#x20;
 
-**Default value:** `true`
-
 Whether or not the application container will be compiled. When set to `false` the container will _not_ be compiled and cached. If left unset the container will be compiled and cached on first run and the cached container will be reused on subsequent requests. Disabling this comes with a (likely negligible) performance hit. Generally this should not be changed but might be necessary to modify when running Directory Lister on a read-only filesystem.
 
 {% tabs %}
