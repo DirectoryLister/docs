@@ -1,50 +1,46 @@
 # Development Environment
 
-### Requirements
+## Requirements
 
-* [PHP](https://php.net) &gt;= 7.4
-  * [Composer](https://getcomposer.org)
-* [NPM](https://www.npmjs.com)
-* [Docker](https://www.docker.com)
-  * [Docker Compose](https://docs.docker.com/compose/)
+* [PHP](https://php.net) >= 8.2 with the `zip`, `dom` and `fileinfo` (and optionally `apcu`, `memcached`, `redis`) extensions&#x20;
+  * [Composer](https://getcomposer.org) for PHP dependency management
+* [NPM](https://www.npmjs.com) for front end asset serving and bundling
+* [Docker](https://www.docker.com) and [Docker Compose](https://docs.docker.com/compose/) for running the local development container
+* [Git](https://git-scm.com/) for version control
 
-### Instructions
+## Instructions
 
 {% hint style="info" %}
 These instructions are for setting up a local DEVELOPMENT environment. If you are looking for basic installation instruction see the [Installation](../getting-started/installation.md) page instead.
 {% endhint %}
 
-1. [Fork the Directory Lister repository to your own account](https://github.com/DirectoryLister/DirectoryLister/fork)
-2. [Clone your fork to a local repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+1. [Fork the Directory Lister repository to your own account](https://github.com/DirectoryLister/DirectoryLister/fork) (optional)
+2.  [Clone Directory Lister to a local repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
-   ```text
-   git clone {{ YOUR_REPOSITORY_URL }}
-   ```
+    ```
+    git clone {{ REPOSITORY_URL }}
+    ```
+3.  Switch to the Directory Lister directory
 
-3. Switch to the Directory Lister directory
+    ```
+    cd /path/to/DirectoryLister
+    ```
+4.  Install and build PHP and JavaScript dependencies
 
-   ```text
-   cd /path/to/DirectoryLister
-   ```
+    ```
+    composer install
+    npm install
+    npm run dev
+    ```
+5.  Run the local Docker container
 
-4. Install and build PHP and JavaScript dependencies
+    ```
+    docker-compose up -d
+    ```
+6.  Add a host name entry to `/etc/hosts` (optional)
 
-   ```text
-   composer install
-   npm install && npm run dev
-   ```
+    ```
+    127.0.0.1  directory-lister.local
+    ```
 
-5. Add the following entry to `/etc/hosts`:
-
-   ```text
-   127.0.0.1  directory-lister.local
-   ```
-
-6. Run the local Docker container
-
-   ```text
-   docker-compose up -d
-   ```
-
-You should now be able to access your local Directory Lister installation at [http://directory-lister.local](http://directory-lister.local)
-
+You should now be able to access your local Directory Lister installation at `http://localhost` (or [http://directory-lister.local](http://directory-lister.local) if you added a host name entry)
