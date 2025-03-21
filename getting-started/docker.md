@@ -69,7 +69,7 @@ services:
     image: phlak/directory-lister:5.0.0
     environment:
       CACHE_DRIVER: redis
-      REDIS_HOSTNAME: redis
+      REDIS_HOST: redis
       # See configuration docs for additional variables
     ports:
       - <host_port>:80
