@@ -66,10 +66,11 @@ The following is an example `docker-compose.yaml` file showing Directory Lister 
 services:
 
   directory-lister:
-    image: phlak/directory-lister:5.0.0
+    image: phlak/directory-lister:<version>
     environment:
       CACHE_DRIVER: redis
       REDIS_HOST: redis
+      REDIS_PORT: 6379
       # See configuration docs for additional variables
     ports:
       - <host_port>:80
@@ -85,6 +86,8 @@ services:
 {% endcode %}
 
 {% hint style="warning" %}
+Replace `<version>` with the version of Directory Lister you'd like to use (e.g. `5.0.1`).
+
 Replace `<host_path>` with the path to the directory you'd like to list.
 
 Replace `<host_port>` with the port you would like to expose the application on.
