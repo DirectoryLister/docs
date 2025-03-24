@@ -31,7 +31,7 @@ The following is an example `docker-compose.yaml` file. For more information on 
 services:
 
   directory-lister:
-    image: phlak/directory-lister:5.0.0
+    image: phlak/directory-lister:<version>
     environment:
       # APP_LANGUAGE: en
       # DISPLAY_READMES: true
@@ -48,6 +48,8 @@ services:
 {% endcode %}
 
 {% hint style="warning" %}
+Replace `<version>` with the version of Directory Lister you'd like to use (e.g. `5.0.4`, `5.0` or `5`)
+
 Replace `<host_path>` with the path to the directory you'd like to list.
 
 Replace `<host_port>` with the port you would like to expose the application on.
@@ -86,7 +88,7 @@ services:
 {% endcode %}
 
 {% hint style="warning" %}
-Replace `<version>` with the version of Directory Lister you'd like to use (e.g. `5.0.1`).
+Replace `<version>` with the version of Directory Lister you'd like to use (e.g. `5.0.4`, `5.0` or `5`)
 
 Replace `<host_path>` with the path to the directory you'd like to list.
 
