@@ -1,3 +1,7 @@
+---
+icon: square-sliders
+---
+
 # Configuration Overview
 
 Directory Lister is customizable through configuration. You can configure Directory Lister in a few different ways.

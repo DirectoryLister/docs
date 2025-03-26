@@ -1,3 +1,7 @@
+---
+icon: briefcase-medical
+---
+
 # Common Issues
 
 The following are common issues and some information on why these occur and how to solve them.

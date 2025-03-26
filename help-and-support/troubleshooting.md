@@ -1,3 +1,7 @@
+---
+icon: wrench
+---
+
 # Troubleshooting
 
 1. Ensure you have met the minimum [requirements](../installation.md#requirements) for running Directory Lister

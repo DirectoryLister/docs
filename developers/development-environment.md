@@ -1,3 +1,7 @@
+---
+icon: laptop-code
+---
+
 # Development Environment
 
 ## Requirements

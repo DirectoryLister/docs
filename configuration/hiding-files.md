@@ -1,3 +1,7 @@
+---
+icon: square-dashed
+---
+
 # Hiding Files
 
 By default Directory Lister will look for a `.hidden` file in the app root directory (the same place as `index.php`). If found, each line of this file will be used as an [ignore pattern](hiding-files.md#ignore-patterns). Each line should contain a single file or path pattern with no end-of-line delimiter.
