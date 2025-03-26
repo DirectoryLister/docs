@@ -1,3 +1,7 @@
+---
+icon: docker
+---
+
 # Docker
 
 Starting with Directory Lister v5.0 an [official Docker image is provided](https://hub.docker.com/repository/docker/phlak/directory-lister) (`phlak/directory-lister`).
@@ -19,7 +23,7 @@ Replace `<host_port>` with the port you would like to expose the application on.
 {% hint style="info" %}
 You may pass one or more environment variables with multiple `--env` flags.
 
-See the [App Config](../configuration/app-config-reference.md) or the [Cache Config](../configuration/cache-config-reference.md) references for the available environment variables.
+See the [Configuration Reference](configuration/configuration-reference.md) for a full list of the available environment variables.
 {% endhint %}
 
 ## Running with `docker compose`
@@ -56,7 +60,7 @@ Replace `<host_port>` with the port you would like to expose the application on.
 {% endhint %}
 
 {% hint style="info" %}
-See the [App Config](../configuration/app-config-reference.md) or the [Cache Config](../configuration/cache-config-reference.md) references for the available environment variables.
+See the [Configuration Reference](configuration/configuration-reference.md) for a full list of the available environment variables.
 {% endhint %}
 
 ### Advanced `docker compose` usage&#x20;

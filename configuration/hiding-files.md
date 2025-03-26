@@ -1,13 +1,13 @@
 # Hiding Files
 
-By default Directory Lister will look for a `.hidden` file in the app root directory \(the same place as `index.php`\). If found, each line of this file will be used as an [ignore pattern](hiding-files.md#ignore-patterns). Each line should contain a single file or path pattern with no end-of-line delimiter.
+By default Directory Lister will look for a `.hidden` file in the app root directory (the same place as `index.php`). If found, each line of this file will be used as an [ignore pattern](hiding-files.md#ignore-patterns). Each line should contain a single file or path pattern with no end-of-line delimiter.
 
 {% hint style="info" %}
 The `.hidden` file does not exist by default and must be created to be used.
 {% endhint %}
 
 {% hint style="info" %}
-You can configure the `.hidden` file name via the [`hidden_file_list`](app-config-reference.md#hidden_files_list)configuration option.
+You can configure the `.hidden` file name via the [`hidden_file_list`](configuration-reference.md#hidden_files_list)configuration option.
 {% endhint %}
 
 ## Ignore Patterns
@@ -23,11 +23,11 @@ Hidden file definitions are _case sensitive_. This means that `foo.txt` and `Foo
 * `?` matches any single character
 * `*` matches zero or more characters excluding `/`
 * `**` matches zero or more characters including `/`
-* `[abc]` matches a single character from the set \(i.e. `a`, `b` or `c`\)
-* `[a-c]` matches a single character in the range \(i.e. `a`, `b` or `c`\)
-* `[^abc]` matches any character not in the set \(i.e. not `a`, `b` or `c`\)
-* `[^a-c]` matches any character not in the range \(i.e. not `a`, `b` or `c`\)
-* `{foo,bar,baz}` matches any pattern in the set \(i.e. `foo`, `bar` or `baz`\)
+* `[abc]` matches a single character from the set (i.e. `a`, `b` or `c`)
+* `[a-c]` matches a single character in the range (i.e. `a`, `b` or `c`)
+* `[^abc]` matches any character not in the set (i.e. not `a`, `b` or `c`)
+* `[^a-c]` matches any character not in the range (i.e. not `a`, `b` or `c`)
+* `{foo,bar,baz}` matches any pattern in the set (i.e. `foo`, `bar` or `baz`)
 
 ### Assertions
 
@@ -48,9 +48,9 @@ A pattern matching a folder path will cause all files and folders within that fo
 
 **`*.txt`** Matches any file or folder ending with `.txt` in the root folder
 
-**`**/*.txt`** Matches any file or folder ending with `.txt` one or more folders deep \(e.g. `foo/bar.txt` or `foo/bar/baz.txt`\)
+**`**/*.txt`** Matches any file or folder ending with `.txt` one or more folders deep (e.g. `foo/bar.txt` or `foo/bar/baz.txt`)
 
-**`**.txt`** Matches any file or folder ending with `.txt` \(e.g. `foo.txt`, `foo/bar.txt`, `foo/bar/baz.txt`, etc.\)
+**`**.txt`** Matches any file or folder ending with `.txt` (e.g. `foo.txt`, `foo/bar.txt`, `foo/bar/baz.txt`, etc.)
 
 **`foo/bar/*.txt`** Matches all `.txt` files or folders in the `foo/bar` folder
 
@@ -59,4 +59,3 @@ A pattern matching a folder path will cause all files and folders within that fo
 **`file.{yml,yaml}`** Matches a file or folder named `file.yml` or `file.yaml` in the root folder
 
 **`file.tar(!.{gz,xz})`** Matches a file named `file.tar` or `file.tar.bz` but not `file.tar.gz` or `file.tar.xz`
-

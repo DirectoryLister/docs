@@ -1,3 +1,7 @@
+---
+icon: circle-info
+---
+
 # Introduction
 
 Directory Lister is the easiest way to expose the contents of any web-accessible folder for browsing and sharing. With a zero configuration, drag-and-drop installation you'll be up and running in less than a minute.
@@ -20,4 +24,3 @@ A list of changes can be found on the [GitHub Releases](https://github.com/Direc
 ## Copyright
 
 This project is licensed under the [MIT License](https://github.com/DirectoryLister/DirectoryLister/blob/master/LICENSE).
-

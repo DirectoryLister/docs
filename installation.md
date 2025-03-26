@@ -1,3 +1,7 @@
+---
+icon: download
+---
+
 # Installation
 
 Installation of Directory Lister is fast and requires no configuration.

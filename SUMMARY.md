@@ -1,19 +1,14 @@
 # Table of contents
 
 * [Introduction](README.md)
-
-## Getting Started
-
-* [Installation](getting-started/installation.md)
-* [Docker](getting-started/docker.md)
-* [Upgrade Guide](getting-started/upgrade-guide.md)
+* [Installation](installation.md)
+* [Upgrade Guide](upgrade-guide.md)
+* [Docker](docker.md)
 
 ## Configuration
 
 * [Configuration Overview](configuration/configuration-overview.md)
-* [App Config Reference](configuration/app-config-reference.md)
-* [Cache Config Reference](configuration/cache-config-reference.md)
-* [Icon Configuration](configuration/icon-configuration.md)
+* [Configuration Reference](configuration/configuration-reference.md)
 * [Hiding Files](configuration/hiding-files.md)
 
 ## Help & Support
@@ -24,5 +19,3 @@
 ## Developers
 
 * [Development Environment](developers/development-environment.md)
-* [Code Analysis & Testing](developers/codae-analysis-and-testing.md)
-* [Building Release Artifacts](developers/building-release-artifacts.md)

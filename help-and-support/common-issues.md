@@ -8,7 +8,7 @@ The following are common issues and some information on why these occur and how 
 
 You may see an error like the following:
 
-```text
+```
 PHP Fatal error:  Uncaught RuntimeException: SplFileInfo::isFile(): open_basedir restriction in effect.
 ```
 
@@ -24,9 +24,9 @@ Configuration changes made in the `.env` file aren't reflected in your applicati
 
 ### Explanation
 
-This was an issue with the v3.4.0 release. The issue was promptly resolved with the v3.4.1 bug fix, however, the bug could persist through upgrades if the application cache wasn't cleared. To resolve this issue, first ensure you're running v3.4.1 or later then clear your application cache as per the [Upgrade Guide](../getting-started/upgrade-guide.md).
+This was an issue with the v3.4.0 release. The issue was promptly resolved with the v3.4.1 bug fix, however, the bug could persist through upgrades if the application cache wasn't cleared. To resolve this issue, first ensure you're running v3.4.1 or later then clear your application cache as per the [Upgrade Guide](../upgrade-guide.md).
 
-```text
+```
 rm -rf app/cache/*
 ```
 
@@ -36,7 +36,7 @@ rm -rf app/cache/*
 
 You may see an error like the following:
 
-```text
+```
 Fatal error: Uncaught Error: Class 'DOMDocument' not found
 ```
 
@@ -46,17 +46,17 @@ This error occurs when you're server is missing the PHP [DOM extension](https://
 
 #### Ubuntu / Debian
 
-```text
+```
 sudo apt install php-dom
 ```
 
 #### Fedora / Redhat
 
-```text
+```
 sudo yum install php-xml
 ```
 
-Alternatively you can disable READMEs by setting [`DISPLAY_READMES`](../configuration/app-config-reference.md#display_readmes) to `false` in your `.env` file.
+Alternatively you can disable READMEs by setting [`DISPLAY_READMES`](../configuration/configuration-reference.md#display_readmes) to `false` in your `.env` file.
 
 ## `Call to undefined function mime_content_type()`
 
@@ -64,7 +64,7 @@ Alternatively you can disable READMEs by setting [`DISPLAY_READMES`](../configur
 
 You may see an error like the following:
 
-```text
+```
 Fatal error: Uncaught Error: Call to undefined function mime_content_type()
 ```
 
@@ -74,15 +74,14 @@ This error occurs when you're server is missing the PHP [fileinfo](https://www.p
 
 #### Ubuntu / Debian
 
-```text
+```
 sudo apt install php-mime-type
 ```
 
 #### Fedora / Redhat
 
-```text
+```
 ???
 ```
 
-Alternatively you can disable READMEs by setting [`DISPLAY_READMES`](../configuration/app-config-reference.md#display_readmes) to `false` in your `.env` file.
-
+Alternatively you can disable READMEs by setting [`DISPLAY_READMES`](../configuration/configuration-reference.md#display_readmes) to `false` in your `.env` file.

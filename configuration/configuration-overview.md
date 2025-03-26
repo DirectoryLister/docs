@@ -29,9 +29,9 @@ SORT_ORDER=type
 REVERSE_SORT=false
 ```
 
-See the [App Config Reference](app-config-reference.md) for additional configuration options.
+See the [App Config Reference](configuration-reference.md) for additional configuration options.
 
-## Application Config
+## Advanced Configuration
 
 More control can be achieved via the application config files located in `app/config`. Here you have full control over each option and can even write full PHP code if desired. The application configs are broken up into separate files based on their use. Reference the individual config documentation for more information about individual application configuration options.
 
@@ -39,13 +39,13 @@ More control can be achieved via the application config files located in `app/co
 Take care when upgrading your Directory Lister installation as the files in `app/config` may be overwritten if you copy/paste and replace all files.
 {% endhint %}
 
-See the [App Config](app-config-reference.md) or the [Cache Config](cache-config-reference.md) references for more information about individual options.
+See the [Configuration Reference](configuration-reference.md) for more information about individual options.
 
 ## Icon Configuration
 
 You can control your application icon mapping through the icon config file.
 
-Reference the [Icon Configuration](icon-configuration.md) for more information on configuring icons.
+Reference the [Icon Configuration](configuration-overview.md#icon-configuration) for more information on configuring icons.
 
 ## Analytics Script Injection
 

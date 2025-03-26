@@ -11,7 +11,7 @@
 ## Instructions
 
 {% hint style="info" %}
-These instructions are for setting up a local DEVELOPMENT environment. If you are looking for basic installation instruction see the [Installation](../getting-started/installation.md) page instead.
+These instructions are for setting up a local DEVELOPMENT environment. If you are looking for basic installation instruction see the [Installation](../installation.md) page instead.
 {% endhint %}
 
 1. [Fork the Directory Lister repository to your own account](https://github.com/DirectoryLister/DirectoryLister/fork) (optional)
@@ -58,7 +58,7 @@ make clear-cache
 ```
 {% endtab %}
 
-{% tab title="Manually" %}
+{% tab title="Manual" %}
 ```sh
 rm --recursive --force app/cache/*
 ```
@@ -74,7 +74,7 @@ make production
 ```
 {% endtab %}
 
-{% tab title="Manually" %}
+{% tab title="Manual" %}
 ```sh
 composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
 npm install --no-save
@@ -93,7 +93,7 @@ make clear-assets
 ```
 {% endtab %}
 
-{% tab title="Manually" %}
+{% tab title="Manual" %}
 ```sh
 rm --recursive --force app/assets/*
 ```
@@ -115,7 +115,7 @@ composer exec phpunit
 ```
 {% endtab %}
 
-{% tab title="Manually" %}
+{% tab title="Manual" %}
 ```sh
 app/vendor/bin/phpunit
 ```
@@ -129,6 +129,12 @@ app/vendor/bin/phpunit
 ```sh
 make coding-standards
 ```
+
+{% hint style="info" %}
+This will apply coding standard fixes will be automatically.\
+\
+See the Compor or Manual tab to report coding standard problems _without_ modifying files.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Composer" %}
@@ -145,10 +151,18 @@ Additionally, to display a diff of the fixes that would be applied, use the `--d
 {% endhint %}
 {% endtab %}
 
-{% tab title="Manually" %}
+{% tab title="Manual" %}
 ```sh
 app/vendor/bin/php-cs-fixer fix [--diff] [--dry-run]
 ```
+
+{% hint style="info" %}
+If no flags are present, coding standard fixes will be automatically applied.\
+\
+To report coding standard problems _without_ modifying files use the `--dry-run` flag.\
+\
+Additionally, to display a diff of the fixes that would be applied, use the `--diff` flag as well.
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 
@@ -167,9 +181,35 @@ composer exec phpstan analyze
 ```
 {% endtab %}
 
-{% tab title="Manually" %}
+{% tab title="Manual" %}
 ```sh
 app/vendor/bin/phpstan analyze
 ```
 {% endtab %}
 {% endtabs %}
+
+### Generate code coverage report
+
+{% tabs %}
+{% tab title="First Tab" %}
+```sh
+make coverage
+```
+{% endtab %}
+
+{% tab title="Composer" %}
+```sh
+XDEBUG_MODE=coverage composer exec phpunit --coverage-html .coverage
+```
+{% endtab %}
+
+{% tab title="Untitled" %}
+```sh
+XDEBUG_MODE=coverage app/vendor/bin/phpunit --coverage-html .coverage
+```
+{% endtab %}
+{% endtabs %}
+
+{% hint style="info" %}
+Code coverage requires a code coverage engine (e.g. xdebug pr pcov) to run.
+{% endhint %}
