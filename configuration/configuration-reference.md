@@ -431,7 +431,7 @@ Sorting order of files and folders. Can be one of several predefined values or a
 
 When using an anonymous function it must be wrapped in a `\DI\value()` function. The anonymous function receives two `\SplFileInfo` objects as arguments and expects an integer to be returned.
 
-### Example
+#### Example
 
 ```php
 'sort_order' => \DI\value(
