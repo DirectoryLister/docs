@@ -75,7 +75,7 @@ services:
     image: phlak/directory-lister:<version>
     environment:
       CACHE_DRIVER: redis
-      REDIS_HOST: redis
+      REDIS_HOST: cache
       REDIS_PORT: 6379
       # See configuration docs for additional variables
     ports:
@@ -85,8 +85,8 @@ services:
     depends_on: [redis]
     restart: unless-stopped
 
-  redis:
-    image: redis:7.4
+  cache:
+    image: valkey:8
     restart: unless-stopped
 ```
 {% endcode %}
