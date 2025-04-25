@@ -4,14 +4,14 @@ icon: docker
 
 # Docker
 
-Starting with Directory Lister v5.0 an [official Docker image is provided](https://hub.docker.com/repository/docker/phlak/directory-lister) (`phlak/directory-lister`).
+Starting with Directory Lister v5.0 an [official Docker image is provided](https://hub.docker.com/r/directorylister/directorylister) as `directorylister/directorylister`.
 
 ## Running with `docker run`
 
 ```bash
 docker run --detach [--env ENVIRONMENT_VARIABLE=value] \
     --volume <host_path>:/data --publish <host_port>:80 \
-    phlak/directory-lister:5.0.0
+    directorylister/directorylister:5
 ```
 
 {% hint style="warning" %}
@@ -35,7 +35,7 @@ The following is an example `docker-compose.yaml` file. For more information on 
 services:
 
   directory-lister:
-    image: phlak/directory-lister:<version>
+    image: directorylister/directorylister:<version>
     environment:
       # APP_LANGUAGE: en
       # DISPLAY_READMES: true
@@ -52,7 +52,7 @@ services:
 {% endcode %}
 
 {% hint style="warning" %}
-Replace `<version>` with the version of Directory Lister you'd like to use (e.g. `5.0.4`, `5.0` or `5`)
+Replace `<version>` with the version of Directory Lister you'd like to use (e.g. `5.0.5`, `5.0` or `5`)
 
 Replace `<host_path>` with the path to the directory you'd like to list.
 
@@ -65,14 +65,14 @@ See the [Configuration Reference](configuration/configuration-reference.md) for 
 
 ### Advanced `docker compose` usage&#x20;
 
-The following is an example `docker-compose.yaml` file showing Directory Lister being run with a redis container for caching.
+The following is an example `docker-compose.yaml` file showing Directory Lister being run with a Valkey container for caching.
 
 {% code title="docker-compose.yaml" %}
 ```yaml
 services:
 
   directory-lister:
-    image: phlak/directory-lister:<version>
+    image: directorylister/directorylister:<version>
     environment:
       CACHE_DRIVER: redis
       REDIS_HOST: cache
@@ -82,7 +82,7 @@ services:
       - <host_port>:80
     volumes:
       - <host_path>:/data
-    depends_on: [redis]
+    depends_on: [cache]
     restart: unless-stopped
 
   cache:
@@ -92,7 +92,7 @@ services:
 {% endcode %}
 
 {% hint style="warning" %}
-Replace `<version>` with the version of Directory Lister you'd like to use (e.g. `5.0.4`, `5.0` or `5`)
+Replace `<version>` with the version of Directory Lister you'd like to use (e.g. `5.0.5`, `5.0` or `5`)
 
 Replace `<host_path>` with the path to the directory you'd like to list.
 

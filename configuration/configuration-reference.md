@@ -523,7 +523,7 @@ The application cache driver. Setting this value to `array` will disable the cac
 
 {% tabs %}
 {% tab title="Possible Values" %}
-`apcu`, `array`, `file`, `memcached`, `redis`, `php-file`
+`apcu`, `array`, `file`, `memcached`, `redis`, `php-file`, `valkey`
 {% endtab %}
 
 {% tab title="Default Value" %}
