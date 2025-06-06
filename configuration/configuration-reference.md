@@ -42,13 +42,13 @@ Whether or not the application container will be compiled. When set to `false` t
 
 ## Runtime Configuration
 
-General runtime configuration is controlled by the app config located at `app/config/app.php`. These options control core application functionality.
+General application runtime configuration can be controlled through environment variables. This can be accomplished via an `.env` file located in the root of your application. An example file is provided as `.env.example`.
 
-{% hint style="warning" %}
-It is highly recommended to set these values via their respective environment variables. This can be accomplished via a `.env` file located in the root of your application. An example file is provided as `.env.example`.
+{% hint style="info" %}
+Advanced configuration can be accomplished via the app config located at `app/config/app.php`. However, changes to this fill will need to be manually re-applied between upgrades. It is highly recommended to stick to environment variables for controlling app configuration unless absolutely necessary.
 {% endhint %}
 
-### `analytics_file`
+### `ANALYTICS_FILE`
 
 File containing analytics scripts that will be included in the HTML output of your directory listing.
 
@@ -60,13 +60,9 @@ A (string) file name
 {% tab title="Default Value" %}
 `.analytics`
 {% endtab %}
-
-{% tab title="Environment Variables" %}
-`ANALYTICS_FILE`
-{% endtab %}
 {% endtabs %}
 
-### `date_format`
+### `DATE_FORMAT`
 
 The format used for rendering dates in the application views.
 
@@ -78,13 +74,9 @@ See the [PHP `date` format documentation](https://www.php.net/manual/en/function
 {% tab title="Default Value" %}
 `Y-m-d H:i:s`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`DATE_FORMAT`
-{% endtab %}
 {% endtabs %}
 
-### `debug`
+### `APP_DEBUG`
 
 Enable application debugging and display error messages.
 
@@ -100,13 +92,9 @@ It is recommended that debug remains OFF unless troubleshooting an issue. Leavin
 {% tab title="Default Value" %}
 `false`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`APP_DEBUG`
-{% endtab %}
 {% endtabs %}
 
-### `display_readmes`
+### `DISPLAY_READMES`
 
 Parse and render `README` files on the page.
 
@@ -118,13 +106,9 @@ Parse and render `README` files on the page.
 {% tab title="Default Value" %}
 `true`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`DISPLAY_READMES`
-{% endtab %}
 {% endtabs %}
 
-### `google_analytics_id`
+### `GOOGLE_ANALYTICS_ID`
 
 Your Google analytics tracking ID.
 
@@ -140,13 +124,9 @@ A string in the format of `UA-123456789-0` or `false` to disable
 {% tab title="Default Value" %}
 `false`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`GOOGLE_ANALYTICS_ID`
-{% endtab %}
 {% endtabs %}
 
-### `hidden_files_list`
+### `HIDDEN_FILES_LIST`
 
 File containing hidden file definitions. Will be merged with definitions from the 'hidden\_files' configuration option.
 
@@ -162,42 +142,9 @@ A path (string) to a file
 {% tab title="Default Value" %}
 `.hidden`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`HIDDEN_FILES_LIST`
-{% endtab %}
 {% endtabs %}
 
-### `hidden_files`
-
-Array of hidden file definitions. Will be merged with definitions in the file defined in the `hidden_files_list` configuration option. Supports glob patterns (e.g. `*.txt`, `file.{yml,yaml}`, etc.).
-
-{% hint style="info" %}
-See the [Hiding Files](hiding-files.md) page for additional info on hiding files.
-{% endhint %}
-
-{% tabs %}
-{% tab title="Possible Values" %}
-An array of paths (strings)
-{% endtab %}
-
-{% tab title="Default Value" %}
-`[]` (an empty array)
-{% endtab %}
-
-{% tab title="Example" %}
-```php
-'hidden_files' => [
-    'somefile.txt', // Matches 'somefile.txt' exactly
-    'README.*', // Matches files named 'README' with any file extension
-    'foo/*', // Matches all files in the 'foo' directory
-    'schema.{ya?ml}', // Matches 'schema.yml' or 'schema.yaml'
-]
-```
-{% endtab %}
-{% endtabs %}
-
-### `hide_app_files`
+### `HIDE_APP_FILES`
 
 Hide application specific files/directories (i.e. `index.php` and the `app` folder).
 
@@ -209,13 +156,9 @@ Hide application specific files/directories (i.e. `index.php` and the `app` fold
 {% tab title="Default Value" %}
 `true`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`HIDE_APP_FILES`
-{% endtab %}
 {% endtabs %}
 
-### `hide_dot_files`
+### `HIDE_DOT_FILES`
 
 Hide dot files/directories from the listing.
 
@@ -227,13 +170,9 @@ Hide dot files/directories from the listing.
 {% tab title="Default Value" %}
 `true`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`HIDE_DOT_FILES`
-{% endtab %}
 {% endtabs %}
 
-### `hide_vcs_files`
+### `HIDE_VCS_FILES`
 
 Hide the files Version Control Systems (i.e. Git and Mercurial) use to store their metadata.
 
@@ -245,13 +184,9 @@ Hide the files Version Control Systems (i.e. Git and Mercurial) use to store the
 {% tab title="Default Value" %}
 `true`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`HIDE_VCS_FILES`
-{% endtab %}
 {% endtabs %}
 
-### `home_text`
+### `HOME_TEXT`
 
 Text of the `home` link in the navigation breadcrumbs. If undefined or `null` will use the translated form of "home" from your selected language.
 
@@ -263,13 +198,9 @@ Any string
 {% tab title="Default Value" %}
 `null`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`HOME_TEXT`
-{% endtab %}
 {% endtabs %}
 
-### `language`
+### `APP_LANGUAGE`
 
 The application's interface language.
 
@@ -281,13 +212,9 @@ See the [`app/translations`](https://github.com/DirectoryLister/DirectoryLister/
 {% tab title="Default Value" %}
 `en` (English)
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`APP_LANGUAGE`
-{% endtab %}
 {% endtabs %}
 
-### `matomo_analytics_site_id`
+### `MATOMO_ANALYTICS_SITE_ID`
 
 Your Matomo analytics site ID.
 
@@ -303,13 +230,9 @@ A Matomo analytics site ID (string)
 {% tab title="Default Value" %}
 `false`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`MATOMO_ANALYTICS_SITE_ID`
-{% endtab %}
 {% endtabs %}
 
-### `matomo_analytics_url`
+### `MATOMO_ANALYTICS_URL`
 
 Your Matomo analytics URL.
 
@@ -325,13 +248,9 @@ A Matomo analytics URL (string)
 {% tab title="Default Value" %}
 `false`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`MATOMO_ANALYTICS_URL`
-{% endtab %}
 {% endtabs %}
 
-### `max_hash_size`
+### `MAX_HASH_SIZE`
 
 The maximum file size (in bytes) that can be hashed. This helps to prevent timeouts for excessively large files.
 
@@ -347,13 +266,9 @@ Any positive integer `0` - `9223372036854775807` ([`PHP_INT_MAX`](https://www.ph
 {% tab title="Default Value" %}
 `1000000000` (1 GB)
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`MAX_HASH_SIZE`
-{% endtab %}
 {% endtabs %}
 
-### `meta_description`
+### `META_DESCRIPTION`
 
 Meta tag description (i.e. `<meta name="description">`) text.
 
@@ -365,13 +280,9 @@ Any string
 {% tab title="Default Value" %}
 `Yet another directory listing, powered by Directory Lister.`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`META_DESCRIPTION`
-{% endtab %}
 {% endtabs %}
 
-### `readmes_first`
+### `READMES_FIRST`
 
 Show READMEs before the file listing.
 
@@ -383,13 +294,9 @@ Show READMEs before the file listing.
 {% tab title="Default Value" %}
 `false`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`READMES_FIRST`
-{% endtab %}
 {% endtabs %}
 
-### `reverse_sort`
+### `REVERSE_SORT`
 
 When enabled, reverses the order of files (after sorting is applied).
 
@@ -401,13 +308,9 @@ When enabled, reverses the order of files (after sorting is applied).
 {% tab title="Default Value" %}
 `false`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`REVERSE_SORT`
-{% endtab %}
 {% endtabs %}
 
-### `site_title`
+### `SITE_TITLE`
 
 The title of your directory listing. This will be displayed in the browser tab/title bar along with the current path.
 
@@ -419,13 +322,9 @@ Any string
 {% tab title="Default Value" %}
 `Directory Lister`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`SITE_TITLE`
-{% endtab %}
 {% endtabs %}
 
-### `sort_order`
+### `SORT_ORDER`
 
 Sorting order of files and folders. Can be one of several predefined values or a custom [anonymous function](https://www.php.net/manual/en/functions.anonymous.php).
 
@@ -449,13 +348,9 @@ When using an anonymous function it must be wrapped in a `\DI\value()` function.
 {% tab title="Default Value" %}
 `type`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`SORT_ORDER`
-{% endtab %}
 {% endtabs %}
 
-### `timezone`
+### `TIMEZONE`
 
 Time zone used for date formatting.
 
@@ -467,13 +362,9 @@ For a list of supported time zones see: [https://www.php.net/manual/en/timezones
 {% tab title="Default Value" %}
 The server's timezone
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`TIMEZONE`
-{% endtab %}
 {% endtabs %}
 
-### `zip_downloads`
+### `ZIP_DOWNLOADS`
 
 Enable downloading of directories as a zip archive.
 
@@ -485,13 +376,9 @@ Enable downloading of directories as a zip archive.
 {% tab title="Default Value" %}
 `true`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`ZIP_DOWNLOADS`
-{% endtab %}
 {% endtabs %}
 
-### &#x20;`zip_compress`
+### &#x20;`ZIP_COMPRESS`
 
 Compress Zip using Deflate. Enabling this option prevents file size estimation and it may prevent zip download resuming when paused.
 
@@ -503,21 +390,17 @@ Compress Zip using Deflate. Enabling this option prevents file size estimation a
 {% tab title="Default Value" %}
 `false`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`ZIP_COMPRESS`
-{% endtab %}
 {% endtabs %}
 
 ## Cache Configuration
 
-The cache config is located at `app/config/cache.php`. These options control the application cache.
+Application cache configuration is also controlled through environment variables. This can be accomplished via an `.env` file located in the root of your application. An example file is provided as `.env.example`.
 
-{% hint style="warning" %}
-It is highly recommended to set these values via their respective environment variables. This can be accomplished via a `.env` file located in the root of your application. An example file is provided as `.env.example`.
+{% hint style="info" %}
+Advanced configuration can be accomplished via the cache config located at `app/config/cache.php`. However, changes to this fill will need to be manually re-applied between upgrades. It is highly recommended to stick to environment variables for controlling cache configuration unless absolutely necessary.
 {% endhint %}
 
-### `cache_driver`
+### `CACHE_DRIVER`
 
 The application cache driver. Setting this value to `array` will disable the cache across requests. Additional driver-specific options may be required with certain values.
 
@@ -529,13 +412,9 @@ The application cache driver. Setting this value to `array` will disable the cac
 {% tab title="Default Value" %}
 `file`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`CACHE_DRIVER`
-{% endtab %}
 {% endtabs %}
 
-### `cache_lifetime`
+### `CACHE_LIFETIME`
 
 The app cache lifetime (in seconds). Setting this value to `0` will cache indefinitely.
 
@@ -547,13 +426,9 @@ Any positive integer
 {% tab title="Default Value" %}
 `60` (one hour)
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`CACHE_LIFETIME`
-{% endtab %}
 {% endtabs %}
 
-### `cache_lottery`
+### `CACHE_LOTTERY`
 
 Some cache drivers require manually pruning the cache periodically to remove expired items. This is the percentage chance (out of 100) of a request "winning" the lottery causing the cache to be pruned.
 
@@ -565,13 +440,9 @@ Any integer betweeen `1` and `100`
 {% tab title="Default Value" %}
 `2`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`CACHE_LOTTERY`
-{% endtab %}
 {% endtabs %}
 
-### `memcached_host`
+### `MEMCACHED_HOST`
 
 The Memcached server hostname or IP address.
 
@@ -583,13 +454,9 @@ Any string
 {% tab title="Default Value" %}
 `localhost`
 {% endtab %}
-
-{% tab title="Environment Variable" %}
-`MEMCACHED_HOST`
-{% endtab %}
 {% endtabs %}
 
-### `memcached_port`
+### `MEMCACHED_PORT`
 
 The Memcached server port.
 
@@ -601,9 +468,104 @@ Any valid port as an integer (`0` to `65353`)
 {% tab title="Default Value" %}
 `11211`
 {% endtab %}
+{% endtabs %}
 
-{% tab title="Environment Variable" %}
-`MEMCACHED_PORT`
+### `REDIS_HOST`
+
+The Redis server hostname or IP address.
+
+{% tabs %}
+{% tab title="Possible Values" %}
+Any string
+{% endtab %}
+
+{% tab title="Default Value" %}
+`localhost`
+{% endtab %}
+{% endtabs %}
+
+### `REDIS_PORT`
+
+The Redis server port.
+
+{% tabs %}
+{% tab title="Possible Values" %}
+Any valid port as an integer (`0` to `65353`)
+{% endtab %}
+
+{% tab title="Defualt Value" %}
+`6379`
+{% endtab %}
+{% endtabs %}
+
+### `VIEW_CACHE`
+
+Path to the view cache directory. Set to `false` to disable view caching entirely.
+
+{% tabs %}
+{% tab title="Possible Values" %}
+A directory path as a string or `false` to disable the view cache entirely
+{% endtab %}
+
+{% tab title="Default Value" %}
+`app/cache/views`
+{% endtab %}
+{% endtabs %}
+
+## Icon Configuration
+
+The icon config is located at `app/config/icons.php`. Here is were file types are mapped to their respective icons. The mapping is a PHP array where the array key is the file extension (without a preceding dot) and the array value is the desired [Font Awesome](https://fontawesome.com/icons) class names.
+
+{% code title="icons.php" %}
+```php
+return [
+    'icons' => [
+        '7z' => 'fas fa-file-archive',
+        'aac' => 'fas fa-music',
+        'accdb' => 'fas fa-database',
+        'ai' => 'fas fa-image',
+        'aif' => 'fas fa-music',
+        'apk' => 'fab fa-android',
+        'app' => 'fas fa-window',
+        'avi' => 'fas fa-video',
+        'bak' => 'fas fa-save',
+        'bat' => 'fas fa-terminal',
+        // etc...
+    ],
+];
+```
+{% endcode %}
+
+## Advanced Configuration
+
+Some configuration values do not have a direct corresponding environment variable. These values can only be controlled through their corresponding entries in the `app/config` files.
+
+#### `hidden_files` <a href="#hidden_files" id="hidden_files"></a>
+
+Array of hidden file definitions. Will be merged with definitions in the file defined in the `hidden_files_list` configuration option. Supports glob patterns (e.g. `*.txt`, `file.{yml,yaml}`, etc.).
+
+{% hint style="info" %}
+See the [Hiding Files](https://docs.directorylister.com/configuration/hiding-files) page for additional info on hiding files.
+{% endhint %}
+
+{% tabs %}
+{% tab title="Possible Values" %}
+An array of paths (strings)
+{% endtab %}
+
+{% tab title="Default Value" %}
+`[]` (an empty array)
+{% endtab %}
+
+{% tab title="Example" %}
+```php
+'hidden_files' => [
+    'somefile.txt', // Matches 'somefile.txt' exactly
+    'README.*', // Matches files named 'README' with any file extension
+    'foo/*', // Matches all files in the 'foo' directory
+    'schema.{ya?ml}', // Matches 'schema.yml' or 'schema.yaml'
+]
+```
 {% endtab %}
 {% endtabs %}
 
@@ -641,42 +603,6 @@ This closure adds a single connection to a server at the host defined by [`memca
 
 {% tab title="Environment Variables" %}
 Uses the `MEMCACHED_HOST` and `MEMCACHED_PORT` variables by default
-{% endtab %}
-{% endtabs %}
-
-### `redis_host`
-
-The Redis server hostname or IP address.
-
-{% tabs %}
-{% tab title="Possible Values" %}
-Any string
-{% endtab %}
-
-{% tab title="Default Value" %}
-`localhost`
-{% endtab %}
-
-{% tab title="Environment Variable" %}
-`REDIS_HOST`
-{% endtab %}
-{% endtabs %}
-
-### `redis_port`
-
-The Redis server port.
-
-{% tabs %}
-{% tab title="Possible Values" %}
-Any valid port as an integer (`0` to `65353`)
-{% endtab %}
-
-{% tab title="Defualt Value" %}
-`6379`
-{% endtab %}
-
-{% tab title="Environment Variable" %}
-`REDIS_PORT`
 {% endtab %}
 {% endtabs %}
 
@@ -719,7 +645,7 @@ Uses the `REDIS_HOST` and `REDIS_PORT` variables by default
 
 ### `http_cache`
 
-HTTP cache values for controlling browser page cache durations. An array of mimetypes mapped to their cache duration in seconds..
+HTTP cache values for controlling browser page cache duration. An array of mime types mapped to their cache duration in seconds.
 
 {% tabs %}
 {% tab title="Possible Values" %}
@@ -735,45 +661,3 @@ An array of [mime types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basic
 ```
 {% endtab %}
 {% endtabs %}
-
-### `view_cache`
-
-Path to the view cache directory. Set to `false` to disable view caching entirely.
-
-{% tabs %}
-{% tab title="Possible Values" %}
-A directory path as a string or `false` to disable the view cache entirely
-{% endtab %}
-
-{% tab title="Default Value" %}
-`app/cache/views`
-{% endtab %}
-
-{% tab title="Environment Variable" %}
-`VIEW_CACHE`
-{% endtab %}
-{% endtabs %}
-
-## Icon Configuration
-
-The icon config is located at `app/config/icons.php`. Here is were file types are mapped to their respective icons. The mapping is a PHP array where the array key is the file extension (without a preceding dot) and the array value is the desired [Font Awesome](https://fontawesome.com/icons) class names.
-
-{% code title="icons.php" %}
-```php
-return [
-    'icons' => [
-        '7z' => 'fas fa-file-archive',
-        'aac' => 'fas fa-music',
-        'accdb' => 'fas fa-database',
-        'ai' => 'fas fa-image',
-        'aif' => 'fas fa-music',
-        'apk' => 'fab fa-android',
-        'app' => 'fas fa-window',
-        'avi' => 'fas fa-video',
-        'bak' => 'fas fa-save',
-        'bat' => 'fas fa-terminal',
-        // etc...
-    ],
-];
-```
-{% endcode %}
