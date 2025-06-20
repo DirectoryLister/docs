@@ -108,6 +108,32 @@ Parse and render `README` files on the page.
 {% endtab %}
 {% endtabs %}
 
+### `DIRECT_LINKS`
+
+Comma separated list of [file matching patterns](hiding-files.md#matching-expressions) to be directly linked. Directly linked files will not be served by Directory Lister but handled by the web server directly.&#x20;
+
+{% hint style="warning" %}
+his setting has no effect when [`FILES_PATH`](configuration-reference.md#files_path) is set.
+{% endhint %}
+
+#### Example
+
+To directly link all `.htm`, `.html` and `.php` files in all folders and sub-folders.
+
+```
+DIRECT_LINKS=**/index.{htm,html},**/*.php
+```
+
+{% tabs %}
+{% tab title="Possible Values" %}
+A comma separated list of [file matching patterns](hiding-files.md#matching-expressions).
+{% endtab %}
+
+{% tab title="Default Value" %}
+`null`
+{% endtab %}
+{% endtabs %}
+
 ### `GOOGLE_ANALYTICS_ID`
 
 Your Google analytics tracking ID.
