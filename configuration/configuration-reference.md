@@ -62,20 +62,6 @@ A (string) file name
 {% endtab %}
 {% endtabs %}
 
-### `DATE_FORMAT`
-
-The format used for rendering dates in the application views.
-
-{% tabs %}
-{% tab title="Possible Values" %}
-See the [PHP `date` format documentation](https://www.php.net/manual/en/function.date.php#refsect1-function.date-parameters) for possible values.
-{% endtab %}
-
-{% tab title="Default Value" %}
-`Y-m-d H:i:s`
-{% endtab %}
-{% endtabs %}
-
 ### `APP_DEBUG`
 
 Enable application debugging and display error messages.
@@ -94,6 +80,42 @@ It is recommended that debug remains OFF unless troubleshooting an issue. Leavin
 {% endtab %}
 {% endtabs %}
 
+### `APP_LANGUAGE`
+
+The application's interface language.
+
+{% tabs %}
+{% tab title="Possible Values" %}
+See the [`app/translations`](https://github.com/DirectoryLister/DirectoryLister/tree/master/app/translations) folder for available translations.
+{% endtab %}
+
+{% tab title="Default Value" %}
+`en` (English)
+{% endtab %}
+{% endtabs %}
+
+### `DATE_FORMAT`
+
+The format used for rendering dates in the application views.
+
+{% tabs %}
+{% tab title="Possible Values" %}
+See the [PHP `date` format documentation](https://www.php.net/manual/en/function.date.php#refsect1-function.date-parameters) for possible values.
+{% endtab %}
+
+{% tab title="Default Value" %}
+`Y-m-d H:i:s`
+{% endtab %}
+{% endtabs %}
+
+### `DIRECT_LINKS`
+
+Comma separated list of [file matching patterns](configuration-overview/file-matching-patterns.md) to be directly linked. Directly linked files will not be served by Directory Lister but handled by the web server directly.&#x20;
+
+{% hint style="warning" %}
+his setting has no effect when [`FILES_PATH`](configuration-reference.md#files_path) is set.
+{% endhint %}
+
 ### `DISPLAY_READMES`
 
 Parse and render `README` files on the page.
@@ -107,14 +129,6 @@ Parse and render `README` files on the page.
 `true`
 {% endtab %}
 {% endtabs %}
-
-### `DIRECT_LINKS`
-
-Comma separated list of [file matching patterns](configuration-overview/file-matching-patterns.md) to be directly linked. Directly linked files will not be served by Directory Lister but handled by the web server directly.&#x20;
-
-{% hint style="warning" %}
-his setting has no effect when [`FILES_PATH`](configuration-reference.md#files_path) is set.
-{% endhint %}
 
 #### Example
 
@@ -223,20 +237,6 @@ Any string
 
 {% tab title="Default Value" %}
 `null`
-{% endtab %}
-{% endtabs %}
-
-### `APP_LANGUAGE`
-
-The application's interface language.
-
-{% tabs %}
-{% tab title="Possible Values" %}
-See the [`app/translations`](https://github.com/DirectoryLister/DirectoryLister/tree/master/app/translations) folder for available translations.
-{% endtab %}
-
-{% tab title="Default Value" %}
-`en` (English)
 {% endtab %}
 {% endtabs %}
 
@@ -482,6 +482,10 @@ Any string
 {% endtab %}
 {% endtabs %}
 
+{% hint style="info" %}
+Advanced Memcached configuration is possible via the [`memcached_config` option](configuration-reference.md#memcached_config) in `app/config/cache.php`
+{% endhint %}
+
 ### `MEMCACHED_PORT`
 
 The Memcached server port.
@@ -495,6 +499,10 @@ Any valid port as an integer (`0` to `65353`)
 `11211`
 {% endtab %}
 {% endtabs %}
+
+{% hint style="info" %}
+Advanced Memcached configuration is possible via the [`memcached_config` option](configuration-reference.md#memcached_config) in `app/config/cache.php`
+{% endhint %}
 
 ### `REDIS_HOST`
 
@@ -510,6 +518,10 @@ Any string
 {% endtab %}
 {% endtabs %}
 
+{% hint style="info" %}
+Advanced Reds configuration is possible via the [`redis_config` option](configuration-reference.md#redis_config) in `app/config/cache.php`
+{% endhint %}
+
 ### `REDIS_PORT`
 
 The Redis server port.
@@ -523,6 +535,10 @@ Any valid port as an integer (`0` to `65353`)
 `6379`
 {% endtab %}
 {% endtabs %}
+
+{% hint style="info" %}
+Advanced Reds configuration is possible via the [`redis_config` option](configuration-reference.md#redis_config) in `app/config/cache.php`
+{% endhint %}
 
 ### `VIEW_CACHE`
 
