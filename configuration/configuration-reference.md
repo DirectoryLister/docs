@@ -110,7 +110,7 @@ Parse and render `README` files on the page.
 
 ### `DIRECT_LINKS`
 
-Comma separated list of [file matching patterns](hiding-files.md#matching-expressions) to be directly linked. Directly linked files will not be served by Directory Lister but handled by the web server directly.&#x20;
+Comma separated list of [file matching patterns](configuration-overview/file-matching-patterns.md) to be directly linked. Directly linked files will not be served by Directory Lister but handled by the web server directly.&#x20;
 
 {% hint style="warning" %}
 his setting has no effect when [`FILES_PATH`](configuration-reference.md#files_path) is set.
@@ -126,7 +126,7 @@ DIRECT_LINKS=**/index.{htm,html},**/*.php
 
 {% tabs %}
 {% tab title="Possible Values" %}
-A comma separated list of [file matching patterns](hiding-files.md#matching-expressions).
+A comma separated list of [file matching patterns](broken-reference).
 {% endtab %}
 
 {% tab title="Default Value" %}
@@ -139,7 +139,7 @@ A comma separated list of [file matching patterns](hiding-files.md#matching-expr
 Your Google analytics tracking ID.
 
 {% hint style="danger" %}
-This configuration option has been deprecated and will stop working in a future release. See the [Analytics Script Injection](configuration-overview.md#analytics-script-injection) section for instructions on configuring analytics tracking.
+This configuration option has been deprecated and will stop working in a future release. See the [Analytics Script Injection](configuration-overview/#analytics-script-injection) section for instructions on configuring analytics tracking.
 {% endhint %}
 
 {% tabs %}
@@ -157,7 +157,7 @@ A string in the format of `UA-123456789-0` or `false` to disable
 File containing hidden file definitions. Will be merged with definitions from the 'hidden\_files' configuration option.
 
 {% hint style="info" %}
-See the [Hiding Files](hiding-files.md) page for additional info on hiding files.
+See the [Hiding Files](broken-reference) page for additional info on hiding files.
 {% endhint %}
 
 {% tabs %}
@@ -245,7 +245,7 @@ See the [`app/translations`](https://github.com/DirectoryLister/DirectoryLister/
 Your Matomo analytics site ID.
 
 {% hint style="danger" %}
-This configuration option has been deprecated and will stop working in a future release. See the [Analytics Script Injection](configuration-overview.md#analytics-script-injection) section for instructions on configuring analytics tracking.
+This configuration option has been deprecated and will stop working in a future release. See the [Analytics Script Injection](configuration-overview/#analytics-script-injection) section for instructions on configuring analytics tracking.
 {% endhint %}
 
 {% tabs %}
@@ -263,7 +263,7 @@ A Matomo analytics site ID (string)
 Your Matomo analytics URL.
 
 {% hint style="danger" %}
-This configuration option has been deprecated and will stop working in a future release. See the [Analytics Script Injection](configuration-overview.md#analytics-script-injection) section for instructions on configuring analytics tracking.
+This configuration option has been deprecated and will stop working in a future release. See the [Analytics Script Injection](configuration-overview/#analytics-script-injection) section for instructions on configuring analytics tracking.
 {% endhint %}
 
 {% tabs %}

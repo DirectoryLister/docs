@@ -7,9 +7,9 @@
 
 ## Configuration
 
-* [Configuration Overview](configuration/configuration-overview.md)
+* [Configuration Overview](configuration/configuration-overview/README.md)
+  * [File Matching Patterns](configuration/configuration-overview/file-matching-patterns.md)
 * [Configuration Reference](configuration/configuration-reference.md)
-* [Hiding Files](configuration/hiding-files.md)
 
 ## Help & Support
 
