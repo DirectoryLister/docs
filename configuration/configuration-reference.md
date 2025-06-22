@@ -113,7 +113,11 @@ See the [PHP `date` format documentation](https://www.php.net/manual/en/function
 Comma separated list of [file matching patterns](configuration-overview/file-matching-patterns.md) to be directly linked. Directly linked files will not be served by Directory Lister but handled by the web server directly.&#x20;
 
 {% hint style="warning" %}
-his setting has no effect when [`FILES_PATH`](configuration-reference.md#files_path) is set.
+This setting has no effect when [`FILES_PATH`](configuration-reference.md#files_path) is set or when used in the Docker container since the container relies on `FILES_PATH` internally.
+{% endhint %}
+
+{% hint style="info" %}
+
 {% endhint %}
 
 ### `DISPLAY_READMES`
