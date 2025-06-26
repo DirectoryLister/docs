@@ -352,19 +352,7 @@ Any string
 
 ### `SORT_ORDER`
 
-Sorting order of files and folders. Can be one of several predefined values or a custom [anonymous function](https://www.php.net/manual/en/functions.anonymous.php).
-
-When using an anonymous function it must be wrapped in a `\DI\value()` function. The anonymous function receives two `\SplFileInfo` objects as arguments and expects an integer to be returned.
-
-#### Example
-
-```php
-'sort_order' => \DI\value(
-    function (SplFileInfo $file1, SplFileInfo $file2) {
-        return strcmp($file1->getRealPath(), $file2->getRealPath());
-    })
-);
-```
+Sorting order of files and folders. Can be one of several predefined values. Advanced sorting configuration can be achieved by using an anonymous function. See the [`sort_order` configuration option](configuration-reference.md#sort_order-1) documentation for more information.
 
 {% tabs %}
 {% tab title="Possible Values" %}
@@ -703,3 +691,19 @@ An array of [mime types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basic
 ```
 {% endtab %}
 {% endtabs %}
+
+### `sort_order`
+
+An [anonymous function](https://www.php.net/manual/en/functions.anonymous.php) can be used to customize the sort order of files and folders in your directory listing. The anonymous function receives two `SplFileInfo` objects as arguments and must return an integer less than, equal to, or greater than zero to represent the first argument being respectively less than, equal to, or greater than the second.
+
+```php
+'sort_order' => \DI\value(
+    function (SplFileInfo $file1, SplFileInfo $file2) {
+        return strcmp($file1->getRealPath(), $file2->getRealPath());
+    })
+);
+```
+
+{% hint style="warning" %}
+The anonymous function must be wrapped in a `\DI\value()` function.
+{% endhint %}
