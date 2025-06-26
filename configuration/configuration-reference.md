@@ -698,7 +698,7 @@ An [anonymous function](https://www.php.net/manual/en/functions.anonymous.php) c
 
 ```php
 'sort_order' => \DI\value(
-    function (SplFileInfo $file1, SplFileInfo $file2) {
+    function (SplFileInfo $file1, SplFileInfo $file2): int {
         return strcmp($file1->getRealPath(), $file2->getRealPath());
     })
 );
