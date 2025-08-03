@@ -10,6 +10,7 @@
 * [Configuration Overview](configuration/configuration-overview/README.md)
   * [File Matching Patterns](configuration/configuration-overview/file-matching-patterns.md)
 * [Configuration Reference](configuration/configuration-reference.md)
+* [Authentication](configuration/authentication.md)
 
 ## Help & Support
 
