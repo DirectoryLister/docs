@@ -568,7 +568,7 @@ return [
 
 ## Advanced Configuration
 
-Some configuration values do not have a direct corresponding environment variable. These values can only be controlled through their corresponding entries in the `app/config` files.
+Some configuration values do not have a corresponding variable. These values can only be controlled through their entries in the `app/config` files.
 
 #### `hidden_files` <a href="#hidden_files" id="hidden_files"></a>
 
