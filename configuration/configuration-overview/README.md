@@ -19,7 +19,8 @@ Most configuration changes are possible via a custom `.env` file. This file defi
 
 Your default `.env` file should look something like this:
 
-```
+{% code title=".env" %}
+```bash
 APP_DEBUG=false
 APP_LANGUAGE=en
 
@@ -32,6 +33,7 @@ ZIP_DOWNLOADS=true
 SORT_ORDER=type
 REVERSE_SORT=false
 ```
+{% endcode %}
 
 See the [App Config Reference](../configuration-reference.md) for additional configuration options.
 
