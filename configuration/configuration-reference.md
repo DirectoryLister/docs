@@ -118,10 +118,10 @@ This setting has no effect when [`FILES_PATH`](configuration-reference.md#files_
 
 #### Example
 
-To directly link all `.htm`, `.html` and `.php` files in all folders and sub-folders.
+To directly link all `.htm`, `.html` _one or more folders deep_ and `.php` files _in all folders and sub-folders_.
 
 ```
-DIRECT_LINKS=**/index.{htm,html},**/*.php
+DIRECT_LINKS=**/index.{htm,html},**.php
 ```
 
 {% tabs %}
