@@ -126,7 +126,7 @@ DIRECT_LINKS=**/index.{htm,html},**/*.php
 
 {% tabs %}
 {% tab title="Possible Values" %}
-A comma separated list of [file matching patterns](broken-reference).
+A comma separated list of [file matching patterns](configuration-overview/file-matching-patterns.md).
 {% endtab %}
 
 {% tab title="Default Value" %}
