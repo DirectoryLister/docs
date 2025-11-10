@@ -116,20 +116,6 @@ Comma separated list of [file matching patterns](configuration-overview/file-mat
 This setting has no effect when [`FILES_PATH`](configuration-reference.md#files_path) is set or when used in the Docker container.
 {% endhint %}
 
-### `DISPLAY_READMES`
-
-Parse and render `README` files on the page.
-
-{% tabs %}
-{% tab title="Possible Values" %}
-`true` or `false`
-{% endtab %}
-
-{% tab title="Default Value" %}
-`true`
-{% endtab %}
-{% endtabs %}
-
 #### Example
 
 To directly link all `.htm`, `.html` and `.php` files in all folders and sub-folders.
@@ -145,6 +131,20 @@ A comma separated list of [file matching patterns](broken-reference).
 
 {% tab title="Default Value" %}
 `null`
+{% endtab %}
+{% endtabs %}
+
+### `DISPLAY_READMES`
+
+Parse and render `README` files on the page.
+
+{% tabs %}
+{% tab title="Possible Values" %}
+`true` or `false`
+{% endtab %}
+
+{% tab title="Default Value" %}
+`true`
 {% endtab %}
 {% endtabs %}
 
