@@ -48,20 +48,6 @@ General application runtime configuration can be controlled through environment 
 Advanced configuration can be accomplished via the app config located at `app/config/app.php`. However, changes to this fill will need to be manually re-applied between upgrades. It is highly recommended to stick to environment variables for controlling app configuration unless absolutely necessary.
 {% endhint %}
 
-### `ANALYTICS_FILE`
-
-File containing analytics scripts that will be included in the HTML output of your directory listing.
-
-{% tabs %}
-{% tab title="Possible Values" %}
-A (string) file name
-{% endtab %}
-
-{% tab title="Default Value" %}
-`.analytics`
-{% endtab %}
-{% endtabs %}
-
 ### `APP_DEBUG`
 
 Enable application debugging and display error messages.
@@ -171,7 +157,7 @@ A string in the format of `UA-123456789-0` or `false` to disable
 File containing hidden file definitions. Will be merged with definitions from the 'hidden\_files' configuration option.
 
 {% hint style="info" %}
-See the [Hiding Files](broken-reference) page for additional info on hiding files.
+See the [Hiding Files](/broken/pages/-MRY0IoZxbSmQKztpD6x) page for additional info on hiding files.
 {% endhint %}
 
 {% tabs %}
@@ -628,7 +614,7 @@ DI\value(function (Memcached $memcached, Config $config): void {
 })
 ```
 
-This closure adds a single connection to a server at the host defined by [`memcached_host`](broken-reference) on the port defined by [`memcached_port`](broken-reference).
+This closure adds a single connection to a server at the host defined by [`memcached_host`](/broken/pages/-MRY0IoXSIBVorYDYDqP#memcached_host) on the port defined by [`memcached_port`](/broken/pages/-MRY0IoXSIBVorYDYDqP#memcached_port).
 {% endtab %}
 
 {% tab title="Environment Variables" %}
@@ -665,7 +651,7 @@ DI\value(function (Redis $redis, Config $config): void {
 })
 ```
 
-This closure adds a single connection to a server at the host defined by [`redis_host`](broken-reference) on the port defined by [`redis_port`](broken-reference).
+This closure adds a single connection to a server at the host defined by [`redis_host`](/broken/pages/-MRY0IoXSIBVorYDYDqP#redis_host) on the port defined by [`redis_port`](/broken/pages/-MRY0IoXSIBVorYDYDqP#redis_port).
 {% endtab %}
 
 {% tab title="Environment Variables" %}

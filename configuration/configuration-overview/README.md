@@ -47,11 +47,11 @@ Each line of the `.hidden` file should contain a single file or path pattern wit
 The `.hidden` file does not exist by default and must be created to be used.
 {% endhint %}
 
-## Analytics Script Injection
+### Custom JavaScript and CSS <a href="#custom-javascript-and-css" id="custom-javascript-and-css"></a>
 
-Directory Lister allows for including arbitrary analytics tracking script (e.g. from [Google Analytics](https://analytics.google.com), [Matomo Analytics](https://matomo.org/), [Umami Analytics](https://umami.is/) or any other analytics service) to be included in the HTML output of your directory listing.
+Directory Lister allows for including arbitrary CSS and JavaScript into your Directory Listing through a `.customizations.html` file. This is particularly useful for injecting analytics tracking script (e.g. [Google Analytics](https://analytics.google.com), [Matomo Analytics](https://matomo.org/), [Umami Analytics](https://umami.is/), etc.) into the HTML output of your directory listing.
 
-To inject your analytics tracking code into your page create a file named `.analytics` in the base project directory (the same folder as `index.php`) and place your analytics tracking script code into this file.
+To inject your code into your page create a file named `.customizations.html` in the base project directory (the same folder as `index.php`) and place your analytics tracking script code into this file.
 
 ## Icon Configuration
 
